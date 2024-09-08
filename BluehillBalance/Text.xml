@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2024-09-07 오후 3:17:39 -->
+<GameData>
+  <!-- English -->
+  <Language_en_US>
+    <Update>
+      <Where Tag="TXT_KEY_BUILDING_MINT_HELP" />
+      <Set Text="Each source of [ICON_RES_GOLD] Gold, [ICON_RES_SILVER] Silver and [ICON_RES_COPPER] Copper worked by this City produces +2 [ICON_GOLD] Gold.[NEWLINE][NEWLINE]City must have at least one of these resources mined nearby. " />
+    </Update>
+    <Update>
+      <Where Tag="TXT_KEY_TECH_TRAPPING_HELP" />
+      <Set Text="Allows your Workers to construct [COLOR_POSITIVE_TEXT]Camps[ENDCOLOR] on sources of [ICON_RES_DEER] Deer, [ICON_RES_IVORY] Ivory, [ICON_RES_BISON] Bison and [ICON_RES_FUR] Fur." />
+    </Update>
+    <Update>
+      <Where Tag="TXT_KEY_BUILDING_GRANARY_HELP" />
+      <Set Text="Each source of [ICON_RES_WHEAT] Wheat [ICON_RES_BANANA] Bananas [ICON_RES_DEER] Deer and [ICON_RES_BISON] Bison worked by this City produce +1 [ICON_FOOD] Food." />
+    </Update>
+    <Update>
+      <Where Tag="TXT_KEY_BUILDING_STONE_WORKS_HELP"/>
+      <Set Text="Each source of [ICON_RES_MARBLE] Marble and [ICON_RES_STONE] Stone worked by this City produce +1 [ICON_PRODUCTION] Production.[NEWLINE][NEWLINE]City must have at least one of these resources improved with a Quarry."/>
+    </Update>
+    <Update>
+      <Where Tag="TXT_KEY_BUILDING_STONE_WORKS_STRATEGY"/>
+      <Set Text="Stone Works can only be constructed in a city near an improved [ICON_RES_STONE] Stone or [ICON_RES_MARBLE] Marble resource. Stone Works increase the [ICON_PRODUCTION] production of the city."/>
+    </Update>
+  </Language_en_US>
+  <!-- Deutsch -->
+  <Language_DE_DE>
+    <Update>
+      <Where Tag="TXT_KEY_BUILDING_STONE_WORKS_HELP"/>
+      <Set Text="Alle Quellen von [ICON_RES_MARBLE] Marmor und [ICON_RES_STONE] Stein, die von dieser Stadt bearbeitet werden, generieren +1 [ICON_PRODUCTION] Produktion.[NEWLINE][NEWLINE]Die Stadt muss mindestens eine dieser Ressourcen mit einem Steinbruch verbessern."/>
+    </Update>
+    <Update>
+      <Where Tag="TXT_KEY_BUILDING_STONE_WORKS_STRATEGY"/>
+      <Set Text="Steinwerke können nur in einer Stadt gebaut werden, die an einer verbesserten [ICON_RES_STONE] Stein- oder [ICON_RES_MARBLE] Marmor-Ressource liegt. Steinwerke erhöhen die [ICON_PRODUCTION] Produktion einer Stadt."/>
+    </Update>
+  </Language_DE_DE>
+  <!-- 한국어 -->
+  <Language_ko_KR>
+    <Update>
+      <Where Tag="TXT_KEY_BUILDING_MARKET_STRATEGY" />
+      <Set Text="시장을 건설하면 도시의 [ICON_GOLD]골드가 증가합니다. 교역로 최대치가 증가합니다. 다른 문명이 이 도시에 개설한 교역로 하나당 이 도시의 [ICON_GOLD]골드가 [COLOR_POSITIVE_TEXT]1[ENDCOLOR] 증가하고 교역로를 개설한 문명의 [ICON_GOLD]골드도 1 증가합니다." />
+    </Update>
+    <Update>
+      <Where Tag="TXT_KEY_BUILDING_MINT_HELP" />
+      <Set Text="도시의 영향권 내에 [ICON_RES_GOLD][COLOR_POSITIVE_TEXT]금[ENDCOLOR]이나 [ICON_RES_SILVER][COLOR_POSITIVE_TEXT]은[ENDCOLOR], [ICON_RES_COPPER][COLOR_POSITIVE_TEXT]구리[ENDCOLOR]가 있는 타일에서 [COLOR_POSITIVE_TEXT]2 [ENDCOLOR][ICON_GOLD]골드를 추가로 얻습니다.[NEWLINE][NEWLINE]도시의 영향권 내에 광산이 건설된 [COLOR_POSITIVE_TEXT]금[ENDCOLOR]이나 [COLOR_POSITIVE_TEXT]은[ENDCOLOR], [COLOR_POSITIVE_TEXT]구리[ENDCOLOR]가 있어야 건설할 수 있습니다." />
+    </Update>
+    <Update>
+      <Where Tag="TXT_KEY_BUILDING_LIGHTHOUSE_HELP" />
+      <Set Text="도시의 영향권에 속한 해상 타일에서 [COLOR_POSITIVE_TEXT]1 [ENDCOLOR][ICON_FOOD]식량을 추가로 얻습니다.[NEWLINE][NEWLINE]각각의 [ICON_RES_FISH]물고기에서 추가적인 [COLOR_POSITIVE_TEXT]1[ENDCOLOR] [ICON_FOOD]식량을 생산합니다.[NEWLINE][NEWLINE]교역로 최대치가 증가합니다.[NEWLINE][COLOR_YELLOW]해안 도시[ENDCOLOR]에서만 건설할 수 있습니다." />
+    </Update>
+    <Update>
+      <Where Tag="TXT_KEY_BUILDING_WINDMILL_HELP"/>
+      <Set Text="건물을 건설할 때 [ICON_PRODUCTION]생산 보너스를 [COLOR_POSITIVE_TEXT]10%[ENDCOLOR] 제공합니다."/>
+    </Update>
+    <Update>
+      <Where Tag="TXT_KEY_BUILDING_WINDMILL_STRATEGY"/>
+      <Set Text="풍차는 도시의 생산을 증가시키는 르네상스시대 건물입니다."/>
+    </Update>
+    <Update>
+      <Where Tag="TXT_KEY_TECH_ECONOMICS_HELP"/>
+      <Set Text="[ICON_PRODUCTION]생산을 증가시키는 [COLOR_POSITIVE_TEXT]풍차[ENDCOLOR]를 만들 수 있습니다."/>
+      <Update>
+        <Where Tag="TXT_KEY_BUILDING_GRANARY_HELP" />
+        <Set Text="도시 근처에 있는 [ICON_RES_WHEAT]밀, [ICON_RES_BANANA]바나나, [ICON_RES_DEER]사슴, [ICON_RES_BISON]들소의 [ICON_FOOD]식량이 추가로 [COLOR_POSITIVE_TEXT]1[ENDCOLOR] 증가합니다.[NEWLINE][NEWLINE]교역로를 통해 자신의 다른 도시로 [ICON_FOOD]식량 보너스를 제공할 수 있습니다." />
+      </Update>
+    </Update>
+    <Update>
+      <Where Tag="TXT_KEY_BUILDING_STONE_WORKS_HELP"/>
+      <Set Text="도시 근처의 [ICON_RES_MARBLE]대리석과 [ICON_RES_STONE]석재의 [ICON_PRODUCTION]생산이 추가로 [COLOR_POSITIVE_TEXT]1[ENDCOLOR] 증가합니다.[NEWLINE][NEWLINE]위 자원들에 채석장을 최소 하나 건설해야 건설할 수 있습니다."/>
+    </Update>
+    <Update>
+      <Where Tag="TXT_KEY_BUILDING_STONE_WORKS_STRATEGY"/>
+      <Set Text="석재공장을 건설하려면 도시 근처에 개발된 석재 또는 대리석 자원이 있어야 합니다. 석재공장은 도시의 생산을 증가시킵니다."/>
+    </Update>
+    <Update>
+      <Where Tag="TXT_KEY_BUILDING_AIRPORT_HELP"/>
+      <Set Text="도시의 공중 유닛 정원이 2에서 [COLOR_POSITIVE_TEXT]5[ENDCOLOR]로 증가합니다. 교역로 최대치가 증가합니다. 세계 불가사의, 자연경관 및 타일 시설이 생산하는 [ICON_CULTURE]문화의 [COLOR_POSITIVE_TEXT]50%[ENDCOLOR]가 이 도시가 생산하는 [ICON_TOURISM]관광에 추가됩니다. 걸작으로 얻는 [ICON_TOURISM]관광이 [COLOR_POSITIVE_TEXT]50%[ENDCOLOR] 증가합니다. 이 도시에서 공수 능력을 사용할 수 있게 됩니다."/>
+    </Update>
+  </Language_ko_KR>
+</GameData>

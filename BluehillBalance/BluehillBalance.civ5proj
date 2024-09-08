@@ -2,13 +2,13 @@
 <Project DefaultTargets="Deploy" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
-    <ProjectGuid>{17b4d4e1-8fa4-40a4-be2c-ec7557c29cf0}</ProjectGuid>
-    <Name>BluehillTweaks</Name>
-    <Guid>1022172a-4709-49c3-8775-6d42cb6aa944</Guid>
-    <ModVersion>1</ModVersion>
+    <ProjectGuid>{5d3a2a3a-c76a-493e-852e-23297c52be10}</ProjectGuid>
+    <Name>Bluehill's Balance</Name>
+    <Guid>3340df93-5fe8-4f23-98f7-b9a11cefe1f5</Guid>
+    <ModVersion>4</ModVersion>
     <Stability>Alpha</Stability>
-    <Teaser>BluehillTweaks</Teaser>
-    <Description>BluehillTweaks</Description>
+    <Teaser>Bluehill's Balance</Teaser>
+    <Description>Bluehill's Balance</Description>
     <Authors>Bluehill</Authors>
     <SpecialThanks>
     </SpecialThanks>
@@ -18,22 +18,23 @@
     <SupportsMultiplayer>true</SupportsMultiplayer>
     <SupportsHotSeat>true</SupportsHotSeat>
     <SupportsMac>true</SupportsMac>
-    <AssemblyName>BluehillTweaks</AssemblyName>
-    <RootNamespace>BluehillTweaks</RootNamespace>
-    <ModReferences />
-    <ModDependencies>
+    <AssemblyName>BluehillBalance</AssemblyName>
+    <RootNamespace>BluehillBalance</RootNamespace>
+    <ModReferences>
       <Association>
         <Type>Mod</Type>
-        <Name>BluehillBalance</Name>
-        <Id>3340df93-5fe8-4f23-98f7-b9a11cefe1f5</Id>
+        <Name>4UC</Name>
+        <Id>9c922650-8174-4495-903e-9ed9d01e67cf</Id>
         <MinVersion>0</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
+    </ModReferences>
+    <ModDependencies>
       <Association>
         <Type>Mod</Type>
-        <Name>Explorer</Name>
-        <Id>705d2254-692e-43fa-a502-dec5ed7ecb94</Id>
-        <MinVersion>0</MinVersion>
+        <Name>Bluehill's DLL Patch</Name>
+        <Id>77417de3-b088-4be9-9d9d-a62c53b549d1</Id>
+        <MinVersion>4</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
     </ModDependencies>
@@ -41,17 +42,27 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>Barb - exp.xml</FileName>
+        <FileName>Defines.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>ExplorerBalance.xml</FileName>
+        <FileName>Handicap.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>GameOptions.xml</FileName>
+        <FileName>Buildings.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Terrains.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Text.xml</FileName>
       </Action>
     </ModActions>
   </PropertyGroup>
@@ -67,15 +78,23 @@
     <DeployMod>true</DeployMod>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Barb - exp.xml">
+    <Content Include="Buildings.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="ExplorerBalance.xml">
+    <Content Include="Defines.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="GameOptions.xml">
+    <Content Include="Handicap.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Terrains.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Text.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

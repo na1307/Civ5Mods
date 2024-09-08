@@ -568,10 +568,16 @@ void CvUnit::initWithNameOffset(int iID, UnitTypes eUnit, int iNameOffset, UnitA
     }
 
     // bonus xp in combat from handicap?
-    int iXPPercent = GC.getGame().getHandicapInfo().getAIFreeXPPercent();
-    if (iXPPercent && !kPlayer.isHuman() && /*kPlayer.GetID() < MAX_MAJOR_CIVS &&*/ canAcquirePromotionAny())
+    int iHumanXPPercent = GC.getGame().getHandicapInfo().getFreeXPPercent();
+    if (iHumanXPPercent && kPlayer.isHuman() && /*kPlayer.GetID() < MAX_MAJOR_CIVS &&*/ canAcquirePromotionAny())
     {
-        changeExperiencePercent(iXPPercent);
+        changeExperiencePercent(iHumanXPPercent);
+    }
+
+    int iAIXPPercent = GC.getGame().getHandicapInfo().getAIFreeXPPercent();
+    if (iAIXPPercent && !kPlayer.isHuman() && /*kPlayer.GetID() < MAX_MAJOR_CIVS &&*/ canAcquirePromotionAny())
+    {
+        changeExperiencePercent(iAIXPPercent);
     }
 
 
