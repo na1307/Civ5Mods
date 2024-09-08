@@ -5,7 +5,7 @@
     <ProjectGuid>{3e04dd42-94c0-4144-923b-23063984c027}</ProjectGuid>
     <Name>Bluehill's DLL Patch</Name>
     <Guid>77417de3-b088-4be9-9d9d-a62c53b549d1</Guid>
-    <ModVersion>3</ModVersion>
+    <ModVersion>4</ModVersion>
     <Stability>Alpha</Stability>
     <Teaser>Patched DLL by Bluehill.</Teaser>
     <Description>Patched DLL by Bluehill.</Description>
@@ -48,6 +48,11 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
+        <FileName>JungleMarsh.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
         <FileName>Text.xml</FileName>
       </Action>
     </ModActions>
@@ -77,6 +82,10 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="GameOptions.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="JungleMarsh.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
