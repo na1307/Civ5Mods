@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2024-09-01 오전 12:14:15 -->
+<GameData>
+	<Terrain_Yields>
+		<Row>
+			<TerrainType>TERRAIN_COAST</TerrainType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>1</Yield>
+		</Row>
+	</Terrain_Yields>
+</GameData>

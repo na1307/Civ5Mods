@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2024-09-04 오후 10:19:56 -->
+<GameData>
+	<!-- English -->
+	<Language_en_US>
+		<Row Tag="TXT_KEY_IMPROVEMENT_NO_IMPROVEMENT">
+			<Text>No Improvement</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_IMPROVEMENTS_NO_IMPROVEMENT_TEXT">
+			<Text>This is a meaningless improvement. Just ignore it.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_REMOVE_IMPROVEMENT">
+			<Text>Remove Improvement</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_REMOVE_IMPROVEMENT_HELP">
+			<Text>Removes the improvement on this tile.</Text>
+		</Row>
+	</Language_en_US>
+	
+	<!-- 한국어 -->
+	<Language_ko_KR>
+		<Row Tag="TXT_KEY_IMPROVEMENT_NO_IMPROVEMENT">
+			<Text>시설 없음</Text>
+		</Row>
+		<Row Tag="TXT_KEY_CIV5_IMPROVEMENTS_NO_IMPROVEMENT_TEXT">
+			<Text>아무 의미 없는 시설입니다. 그냥 무시하세요.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_REMOVE_IMPROVEMENT">
+			<Text>시설 제거</Text>
+		</Row>
+		<Row Tag="TXT_KEY_BUILD_REMOVE_IMPROVEMENT_HELP">
+			<Text>이 타일에 있는 시설을 제거합니다.</Text>
+		</Row>
+	</Language_ko_KR>
+</GameData>

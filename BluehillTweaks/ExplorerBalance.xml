@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2023-12-08 오후 9:10:18 -->
+<GameData>
+	<Units>
+		<!-- Balance -->
+		<Update>
+			<Where Type="UNIT_EXPLORERX" />
+			<Set Moves="2" />
+		</Update>
+		<Update>
+			<Where Type="UNIT_EXPLORERX" />
+			<Set ObsoleteTech="TECH_RADAR" />
+		</Update>
+		<Update>
+			<Where Type="UNIT_PARATROOPER" />
+			<Set ObsoleteTech="TECH_NANOTECHNOLOGY" />
+		</Update>
+		<!-- 3UC Chasqui -->
+		<Update>
+			<Set Moves="2" />
+			<Where Type="UNIT_3UC_CHASQUI" />
+		</Update>
+		<Update>
+			<Set ObsoleteTech="TECH_RIFLING" />
+			<Where Type="UNIT_3UC_CHASQUI" />
+		</Update>
+	</Units>
+	<Unit_ClassUpgrades>
+		<!-- 3UC Chasqui to Explorer -->
+		<Row>
+			<UnitType>UNIT_3UC_CHASQUI</UnitType>
+			<UnitClassType>UNITCLASS_EXPLORERX</UnitClassType>
+		</Row>
+		<!-- Explorer to Paratrooper -->
+		<Row>
+			<UnitType>UNIT_EXPLORERX</UnitType>
+			<UnitClassType>UNITCLASS_PARATROOPER</UnitClassType>
+		</Row>
+	</Unit_ClassUpgrades>
+	<Unit_FreePromotions>
+		<!-- Balance -->
+		<Delete UnitType="UNIT_EXPLORERX" PromotionType="PROMOTION_EXTRA_SIGHT_I" />
+		<Row>
+			<UnitType>UNIT_SCOUT</UnitType>
+			<PromotionType>PROMOTION_GOODY_HUT_PICKER</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_EXPLORERX</UnitType>
+			<PromotionType>PROMOTION_GOODY_HUT_PICKER</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_3UC_CHASQUI</UnitType>
+			<PromotionType>PROMOTION_EXTRA_MOVES_I</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_3UC_CHASQUI</UnitType>
+			<PromotionType>PROMOTION_GOODY_HUT_PICKER</PromotionType>
+		</Row>
+		<Delete UnitType="UNIT_PARATROOPER" PromotionType="PROMOTION_FREE_PILLAGE_MOVES" />
+		<Row>
+			<UnitType>UNIT_PARATROOPER</UnitType>
+			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_PARATROOPER</UnitType>
+			<PromotionType>PROMOTION_GOODY_HUT_PICKER</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_XCOM_SQUAD</UnitType>
+			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_XCOM_SQUAD</UnitType>
+			<PromotionType>PROMOTION_GOODY_HUT_PICKER</PromotionType>
+		</Row>
+	</Unit_FreePromotions>
+	<Language_ko_KR>
+		<Row Tag="TXT_KEY_UNIT_EXPLORERX">
+			<Text>탐험가</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_EXPLORERX_STRATEGY">
+			<Text>탐험가는 강선이 발견되었을 때 정찰병 유닛의 업그레이드입니다. 산업 시대 유닛 중 가장 약하지만 지형 비용을 무시합니다.</Text>
+		</Row>
+		<Row Tag="TXT_KEY_UNIT_HELP_EXPLORERX">
+			<Text>탐험과 정찰을 전문으로 하는 산업 시대 유닛입니다. 지형 비용을 무시하지만 그의 시대에서 가장 약한 유닛입니다.</Text>
+		</Row>
+	</Language_ko_KR>
+</GameData>
