@@ -2,43 +2,44 @@
 <Project DefaultTargets="Deploy" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
-    <ProjectGuid>{5d3a2a3a-c76a-493e-852e-23297c52be10}</ProjectGuid>
-    <Name>Bluehill's Balance</Name>
-    <Guid>3340df93-5fe8-4f23-98f7-b9a11cefe1f5</Guid>
+    <ProjectGuid>{3e04dd42-94c0-4144-923b-23063984c027}</ProjectGuid>
+    <Name>Bluehill's Balance Part 1</Name>
+    <Guid>77417de3-b088-4be9-9d9d-a62c53b549d1</Guid>
     <ModVersion>4</ModVersion>
     <Stability>Alpha</Stability>
-    <Teaser>Bluehill's Balance</Teaser>
-    <Description>Bluehill's Balance</Description>
+    <Teaser>Bluehill's Balance Part 1</Teaser>
+    <Description>Bluehill's Balance Part 1</Description>
     <Authors>Bluehill</Authors>
-    <SpecialThanks>
-    </SpecialThanks>
+    <SpecialThanks>William Howard</SpecialThanks>
     <AffectsSavedGames>true</AffectsSavedGames>
     <MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
     <SupportsSinglePlayer>true</SupportsSinglePlayer>
     <SupportsMultiplayer>true</SupportsMultiplayer>
     <SupportsHotSeat>true</SupportsHotSeat>
     <SupportsMac>true</SupportsMac>
-    <AssemblyName>BluehillBalance</AssemblyName>
-    <RootNamespace>BluehillBalance</RootNamespace>
-    <ModReferences>
-      <Association>
-        <Type>Mod</Type>
-        <Name>4UC</Name>
-        <Id>9c922650-8174-4495-903e-9ed9d01e67cf</Id>
-        <MinVersion>0</MinVersion>
-        <MaxVersion>999</MaxVersion>
-      </Association>
-    </ModReferences>
+    <AssemblyName>BluehillBalance1</AssemblyName>
+    <RootNamespace>BluehillBalance1</RootNamespace>
+    <ModReferences />
     <ModDependencies>
-      <Association>
-        <Type>Mod</Type>
-        <Name>Bluehill's DLL Patch</Name>
-        <Id>77417de3-b088-4be9-9d9d-a62c53b549d1</Id>
-        <MinVersion>4</MinVersion>
+      <Association xmlns="">
+        <Type>Dlc</Type>
+        <Name>Expansion 2 - Brave New World</Name>
+        <Id>6DA07636-4123-4018-B643-6575B4EC336B</Id>
+        <MinVersion>0</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
     </ModDependencies>
     <ModActions>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Table.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>GameOptions.xml</FileName>
+      </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
@@ -47,17 +48,7 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>Handicap.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>Buildings.xml</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>Terrains.xml</FileName>
+        <FileName>JungleMarsh.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -78,19 +69,27 @@
     <DeployMod>true</DeployMod>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Buildings.xml">
+    <Content Include="CvGameCore_Expansion2.dll">
       <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
+      <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Defines.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Handicap.xml">
+    <Content Include="EUI_tooltip_server.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="GameOptions.xml">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Terrains.xml">
+    <Content Include="JungleMarsh.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Table.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
