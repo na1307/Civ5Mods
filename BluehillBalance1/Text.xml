@@ -59,7 +59,7 @@
 			<Text>, 가장 가까운 도시에 [COLOR_POSITIVE_TEXT]{1_Num}[ENDCOLOR] [ICON_FOOD]식량을 제공합니다.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_BUILD_FEATURE_FOOD_PRODUCTION">
-			<Text>, 가장 가까운 도시에 [COLOR_POSITIVE_TEXT]{1_Num}[ENDCOLOR] [ICON_FOOD]식량 및 [COLOR_POSITIVE_TEXT]{2_Num}[ENDCOLOR] [ICON_PRODUCTION]생산을 제공합니다.</Text>
+			<Text>, 가장 가까운 도시에 [COLOR_POSITIVE_TEXT]{1_Num}[ENDCOLOR] [ICON_FOOD]식량 및 [COLOR_POSITIVE_TEXT]{2_Num}[ENDCOLOR] [ICON_PRODUCTION]생산력을 제공합니다.</Text>
 		</Row>
 		<Row Tag="TXT_KEY_MISC_CLEARING_FEATURE_RESOURCE_FOOD">
 			<Text>{@1_FeatName}의 제거를 완료했습니다. [COLOR_POSITIVE_TEXT]{2_Num} [ENDCOLOR][ICON_FOOD]식량이 {@3_CityName}에 추가됐습니다.</Text>

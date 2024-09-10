@@ -5233,7 +5233,8 @@ int CvLuaPlayer::lCreateGreatGeneral(lua_State *L)
 //int getGreatPeopleCreated();
 int CvLuaPlayer::lGetGreatPeopleCreated(lua_State *L)
 {
-    return BasicLuaMethod(L, &CvPlayerAI::getGreatPeopleCreated);
+    lua_pushinteger(L, 0);
+    return 1;
 }
 //------------------------------------------------------------------------------
 //int getGreatGeneralsCreated();

@@ -177,7 +177,6 @@ CvPlayer::CvPlayer() :
     , m_iNumUnitGoldenAges("CvPlayer::m_iNumUnitGoldenAges", m_syncArchive)
     , m_iStrikeTurns("CvPlayer::m_iStrikeTurns", m_syncArchive)
     , m_iGoldenAgeModifier("CvPlayer::m_iGoldenAgeModifier", m_syncArchive)
-    , m_iFreeGreatPeopleCreated(0)
     , m_iFreeGreatGeneralsCreated(0)
     , m_iFreeGreatAdmiralsCreated(0)
     , m_iFreeGreatMerchantsCreated(0)
@@ -186,7 +185,6 @@ CvPlayer::CvPlayer() :
     , m_iFreeGreatWritersCreated(0)
     , m_iFreeGreatArtistsCreated(0)
     , m_iFreeGreatMusiciansCreated(0)
-    , m_iGreatPeopleCreated("CvPlayer::m_iGreatPeopleCreated", m_syncArchive)
     , m_iGreatGeneralsCreated("CvPlayer::m_iGreatGeneralsCreated", m_syncArchive)
     , m_iGreatAdmiralsCreated(0)
     , m_iGreatMerchantsCreated(0)
@@ -796,7 +794,6 @@ void CvPlayer::uninit()
     m_iNumUnitGoldenAges = 0;
     m_iStrikeTurns = 0;
     m_iGoldenAgeModifier = 0;
-    m_iFreeGreatPeopleCreated = 0;
     m_iFreeGreatGeneralsCreated = 0;
     m_iFreeGreatAdmiralsCreated = 0;
     m_iFreeGreatMerchantsCreated = 0;
@@ -805,7 +802,6 @@ void CvPlayer::uninit()
     m_iFreeGreatWritersCreated = 0;
     m_iFreeGreatArtistsCreated = 0;
     m_iFreeGreatMusiciansCreated = 0;
-    m_iGreatPeopleCreated = 0;
     m_iGreatGeneralsCreated = 0;
     m_iGreatAdmiralsCreated = 0;
     m_iGreatMerchantsCreated = 0;
@@ -12580,23 +12576,6 @@ void CvPlayer::changeGoldenAgeModifier(int iChange)
 }
 
 //	--------------------------------------------------------------------------------
-int CvPlayer::getGreatPeopleCreated(bool bExcludeFree) const
-{
-    int iCount = m_iGreatPeopleCreated;
-    if (bExcludeFree)
-        iCount -= m_iFreeGreatPeopleCreated;
-    return iCount;
-}
-
-//	--------------------------------------------------------------------------------
-void CvPlayer::incrementGreatPeopleCreated(bool bIsFree)
-{
-    m_iGreatPeopleCreated++;
-    if (bIsFree)
-        m_iFreeGreatPeopleCreated++;
-}
-
-//	--------------------------------------------------------------------------------
 int CvPlayer::getGreatGeneralsCreated(bool bExcludeFree) const
 {
     int iCount = m_iGreatGeneralsCreated;
@@ -21964,7 +21943,6 @@ void CvPlayer::Read(FDataStream &kStream)
     kStream >> m_iNumUnitGoldenAges;
     kStream >> m_iStrikeTurns;
     kStream >> m_iGoldenAgeModifier;
-    kStream >> m_iFreeGreatPeopleCreated;
     kStream >> m_iFreeGreatGeneralsCreated;
     kStream >> m_iFreeGreatAdmiralsCreated;
     kStream >> m_iFreeGreatMerchantsCreated;
@@ -21973,7 +21951,6 @@ void CvPlayer::Read(FDataStream &kStream)
     kStream >> m_iFreeGreatWritersCreated;
     kStream >> m_iFreeGreatArtistsCreated;
     kStream >> m_iFreeGreatMusiciansCreated;
-    kStream >> m_iGreatPeopleCreated;
     kStream >> m_iGreatGeneralsCreated;
     kStream >> m_iGreatAdmiralsCreated;
     kStream >> m_iGreatMerchantsCreated;
@@ -22517,7 +22494,6 @@ void CvPlayer::Write(FDataStream &kStream) const
     kStream << m_iNumUnitGoldenAges;
     kStream << m_iStrikeTurns;
     kStream << m_iGoldenAgeModifier;
-    kStream << m_iFreeGreatPeopleCreated;
     kStream << m_iFreeGreatGeneralsCreated;
     kStream << m_iFreeGreatAdmiralsCreated;
     kStream << m_iFreeGreatMerchantsCreated;
@@ -22526,7 +22502,6 @@ void CvPlayer::Write(FDataStream &kStream) const
     kStream << m_iFreeGreatWritersCreated;
     kStream << m_iFreeGreatArtistsCreated;
     kStream << m_iFreeGreatMusiciansCreated;
-    kStream << m_iGreatPeopleCreated;
     kStream << m_iGreatGeneralsCreated;
     kStream << m_iGreatAdmiralsCreated;
     kStream << m_iGreatMerchantsCreated;

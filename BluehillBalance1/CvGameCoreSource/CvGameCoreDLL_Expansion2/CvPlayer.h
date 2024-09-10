@@ -597,9 +597,6 @@ public:
     void createGreatGeneral(UnitTypes eGreatPersonUnit, int iX, int iY, bool bIsFree);
     void createGreatAdmiral(UnitTypes eGreatPersonUnit, int iX, int iY, bool bIsFree);
 
-    int getGreatPeopleCreated(bool bExcludeFree) const;
-    void incrementGreatPeopleCreated(bool bIsFree);
-
     int getGreatGeneralsCreated(bool bExcludeFree) const;
     void incrementGreatGeneralsCreated(bool bIsFree);
     int getGreatAdmiralsCreated(bool bExcludeFree) const;
@@ -1629,7 +1626,6 @@ protected:
     FAutoVariable<int, CvPlayer> m_iNumUnitGoldenAges;
     FAutoVariable<int, CvPlayer> m_iStrikeTurns;
     FAutoVariable<int, CvPlayer> m_iGoldenAgeModifier;
-    int m_iFreeGreatPeopleCreated;
     int m_iFreeGreatGeneralsCreated;
     int m_iFreeGreatAdmiralsCreated;
     int m_iFreeGreatMerchantsCreated;
@@ -1638,7 +1634,6 @@ protected:
     int m_iFreeGreatWritersCreated;
     int m_iFreeGreatArtistsCreated;
     int m_iFreeGreatMusiciansCreated;
-    FAutoVariable<int, CvPlayer> m_iGreatPeopleCreated;
     FAutoVariable<int, CvPlayer> m_iGreatGeneralsCreated;
     int m_iGreatAdmiralsCreated;
     int m_iGreatMerchantsCreated;
