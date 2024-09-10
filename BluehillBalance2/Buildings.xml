@@ -9,6 +9,24 @@
       </Set>
     </Update>
     <Update>
+      <Where BuildingClass="BUILDINGCLASS_MONUMENT" />
+      <Set>
+        <GoldMaintenance>0</GoldMaintenance>
+      </Set>
+    </Update>
+    <Update>
+      <Where BuildingClass="BUILDINGCLASS_GRANARY" />
+      <Set>
+        <GoldMaintenance>0</GoldMaintenance>
+      </Set>
+    </Update>
+    <Update>
+      <Where BuildingClass="BUILDINGCLASS_WATERMILL" />
+      <Set>
+        <GoldMaintenance>0</GoldMaintenance>
+      </Set>
+    </Update>
+    <Update>
       <Where Type="BUILDING_STONE_WORKS" />
       <Set>
         <ProhibitedCityTerrain>NULL</ProhibitedCityTerrain>
@@ -33,15 +51,15 @@
       </Set>
     </Update>
     <Update>
-      <Where Type="BUILDING_AIRPORT" />
-      <Set>
-        <AirModifier>3</AirModifier>
-      </Set>
-    </Update>
-    <Update>
       <Where BuildingClass="BUILDINGCLASS_AIRPORT" />
       <Set>
         <NumTradeRouteBonus>1</NumTradeRouteBonus>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="BUILDING_AIRPORT" />
+      <Set>
+        <AirModifier>3</AirModifier>
       </Set>
     </Update>
   </Buildings>

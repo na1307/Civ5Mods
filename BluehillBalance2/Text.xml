@@ -77,5 +77,37 @@
       <Where Tag="TXT_KEY_BUILDING_AIRPORT_HELP"/>
       <Set Text="도시의 공중 유닛 정원이 2에서 [COLOR_POSITIVE_TEXT]5[ENDCOLOR]로 증가합니다. 사용할 수 있는 교역로 수가 증가합니다. 세계 불가사의, 자연경관 및 타일 시설이 생산하는 [ICON_CULTURE]문화의 [COLOR_POSITIVE_TEXT]50%[ENDCOLOR]가 이 도시가 생산하는 [ICON_TOURISM]관광에 추가됩니다. 걸작으로 얻는 [ICON_TOURISM]관광이 [COLOR_POSITIVE_TEXT]50%[ENDCOLOR] 증가합니다. 이 도시에서 공수 능력을 사용할 수 있게 됩니다."/>
     </Update>
+    <Update>
+      <Where Tag="TXT_KEY_POLICY_BRANCH_HONOR_HELP"/>
+      <Set Text="[COLOR_POSITIVE_TEXT]명예[ENDCOLOR]는 당신의 군대를 다양한 방법으로 강화합니다.[NEWLINE][NEWLINE]명예를 채택하면 야만인과의 전투 시에 33%의 전투 보너스를 얻을 수 있으며, 적 유닛을 처치할 때마다 [ICON_CULTURE]문화를 얻을 수 있으며, 제우스 동상을 건설할 수 있습니다.[NEWLINE][NEWLINE]명예 계열의 모든 정책을 채택하면 군사 유닛이 전투로 얻는 경험치가 [COLOR_POSITIVE_TEXT]50%[ENDCOLOR] 증가하며, 위대한 장군이 [COLOR_POSITIVE_TEXT]50%[ENDCOLOR] 더 자주 출현합니다. 또한, 산업 시대 시작부터 [ICON_PEACE]신앙으로 위대한 장군을 구매할 수 있습니다."/>
+    </Update>
+    <Update>
+      <Where Tag="TXT_KEY_POLICY_WARRIOR_CODE_HELP"/>
+      <Set Text="[COLOR_POSITIVE_TEXT]전사 규범[ENDCOLOR][NEWLINE]근접 유닛을 생산할 때 [ICON_PRODUCTION]생산력이 [COLOR_POSITIVE_TEXT]30%[ENDCOLOR] 증가하며 병영, 무기고, 사관 학교 건설의 건설 속도가 [COLOR_POSITIVE_TEXT]50%[ENDCOLOR] 증가합니다."/>
+    </Update>
+    <Update>
+      <Where Tag="TXT_KEY_POLICY_MILITARY_TRADITION_HELP"/>
+      <Set Text="[COLOR_POSITIVE_TEXT]군사 전통[ENDCOLOR][NEWLINE][ICON_CAPITAL]수도 주위에 위대한 장군이 출현합니다."/>
+    </Update>
+    <Update>
+      <Where Tag="TXT_KEY_POLICY_PROFESSIONAL_ARMY_HELP"/>
+      <Set Text="[COLOR_POSITIVE_TEXT]직업 군대[ENDCOLOR][NEWLINE]군사 유닛을 업그레이드하는 데 필요한 [ICON_GOLD]골드가 [COLOR_POSITIVE_TEXT]33%[ENDCOLOR] 감소하며, 적 유닛을 처치할 때마다 [ICON_GOLD]골드를 얻을 수 있습니다."/>
+    </Update>
+    <Update>
+      <Where Tag="TXT_KEY_POLICY_BRANCH_PIETY_HELP"/>
+      <Set Text="[COLOR_POSITIVE_TEXT]경건[ENDCOLOR]은 문명의 [ICON_PEACE]신앙을 늘려줍니다.[NEWLINE][NEWLINE]경건을 채택하면 성소가 [ICON_CULTURE]문화 [COLOR_POSITIVE_TEXT]1[ENDCOLOR], 사원이 [ICON_CULTURE]문화 [COLOR_POSITIVE_TEXT]2[ENDCOLOR]를 생성하고 성소와 사원의 건설 시간이 반으로 줄어들며, 젠네 모스크를 건설할 수 있습니다.[NEWLINE][NEWLINE]경건 계열의 모든 정책을 채택하면 위대한 선지자가 출현하며 성지에서 [ICON_CULTURE]문화를 추가로 3 생성합니다."/>
+    </Update>
+    <Update>
+      <Where Tag="TXT_KEY_POLICY_BRANCH_COMMERCE_HELP"/>
+      <Set Text="[COLOR_POSITIVE_TEXT]상업[ENDCOLOR]은 [ICON_GOLD]골드에 초점을 맞춘 보너스를 제공합니다.[NEWLINE][NEWLINE]상업을 채택하면 [ICON_CAPITAL]수도의 [ICON_GOLD]골드가 25% 증가하며, 빅 벤을 건설할 수 있습니다.[NEWLINE][NEWLINE]상업 계열의 모든 정책을 채택하면 도시에서 유닛이나 건물 구매에 필요한 [ICON_GOLD]골드가 [COLOR_POSITIVE_TEXT]25%[ENDCOLOR] 감소합니다. 또한, 산업 시대 시작부터 [ICON_PEACE]신앙으로 위대한 상인을 구매할 수 있습니다."/>
+    </Update>
+    <Update>
+      <Where Tag="TXT_KEY_POLICY_MERCANTILISM_HELP"/>
+      <Set Text="[COLOR_POSITIVE_TEXT]중상주의[ENDCOLOR][NEWLINE]모든 교역소와 전문가의 [ICON_GOLD]골드 획득량이 1 증가합니다. 화폐 주조소, 시장, 은행 및 증권 거래소마다 [ICON_RESEARCH]과학이 [COLOR_POSITIVE_TEXT]1[ENDCOLOR] 증가합니다."/>
+    </Update>
+    <Update>
+      <Where Tag="TXT_KEY_POLICY_BRANCH_EXPLORATION_HELP"/>
+      <Set Text="[COLOR_POSITIVE_TEXT]탐험[ENDCOLOR]은 바다를 넘어 제국을 확장하는 능력을 강화합니다.[NEWLINE][NEWLINE]탐험을 채택하면 해상 유닛과 승선한 지상 유닛의 [ICON_MOVES]행동력이 1 증가하고 해상 전투 유닛의 시야가 1 증가하며, 루브르 박물관을 건설할 수 있습니다.[NEWLINE][NEWLINE]탐험 계열의 모든 정책을 채택하면 숨겨진 사적지를 볼 수 있습니다. 또한, 산업 시대 시작부터 [ICON_PEACE]신앙으로 위대한 제독을 구매할 수 있습니다."/>
+    </Update>
   </Language_ko_KR>
 </GameData>

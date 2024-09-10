@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2024-09-10 오후 8:36:33 -->
+<GameData>
+  <Policies>
+    <Update>
+      <Where Type="POLICY_EXPLORATION" />
+      <Set>
+        <EmbarkedExtraMoves>1</EmbarkedExtraMoves>
+      </Set>
+    </Update>
+  </Policies>
+</GameData>

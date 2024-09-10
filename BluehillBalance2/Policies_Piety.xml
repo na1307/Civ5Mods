@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2024-09-10 오후 8:09:32 -->
+<GameData>
+  <Policy_BuildingClassCultureChanges>
+    <Row>
+      <PolicyType>POLICY_PIETY</PolicyType>
+      <BuildingClassType>BUILDINGCLASS_SHRINE</BuildingClassType>
+      <CultureChange>1</CultureChange>
+    </Row>
+    <Row>
+      <PolicyType>POLICY_PIETY</PolicyType>
+      <BuildingClassType>BUILDINGCLASS_TEMPLE</BuildingClassType>
+      <CultureChange>2</CultureChange>
+    </Row>
+  </Policy_BuildingClassCultureChanges>
+  <Policy_Flavors>
+    <Row>
+      <PolicyType>POLICY_PIETY</PolicyType>
+      <FlavorType>FLAVOR_CULTURE</FlavorType>
+      <Flavor>10</Flavor>
+    </Row>
+  </Policy_Flavors>
+</GameData>
