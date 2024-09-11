@@ -162,7 +162,6 @@ CvPlayer::CvPlayer() :
     , m_iWoundedUnitDamageMod("CvPlayer::m_iWoundedUnitDamageMod", m_syncArchive)
     , m_iUnitUpgradeCostMod("CvPlayer::m_iUnitUpgradeCostMod", m_syncArchive)
     , m_iBarbarianCombatBonus("CvPlayer::m_iBarbarianCombatBonus", m_syncArchive)
-    , m_iAlwaysSeeBarbCampsCount("CvPlayer::m_iAlwaysSeeBarbCampsCount", m_syncArchive)
     , m_iHappinessFromBuildings("CvPlayer::m_iHappinessFromBuildings", m_syncArchive)
     , m_iHappinessPerCity("CvPlayer::m_iHappinessPerCity", m_syncArchive)
     , m_iHappinessPerXPolicies(0)
@@ -779,7 +778,6 @@ void CvPlayer::uninit()
     m_iWoundedUnitDamageMod = 0;
     m_iUnitUpgradeCostMod = 0;
     m_iBarbarianCombatBonus = 0;
-    m_iAlwaysSeeBarbCampsCount = 0;
     m_iHappinessFromBuildings = 0;
     m_iHappinessPerCity = 0;
     m_iHappinessPerXPolicies = 0;
@@ -12011,27 +12009,6 @@ void CvPlayer::ChangeBarbarianCombatBonus(int iChange)
 }
 
 //	--------------------------------------------------------------------------------
-/// Do we always see where Barb Camps appear?
-bool CvPlayer::IsAlwaysSeeBarbCamps() const
-{
-    return m_iAlwaysSeeBarbCampsCount > 0;
-}
-
-//	--------------------------------------------------------------------------------
-/// Sets if we always see where Barb Camps appear
-void CvPlayer::SetAlwaysSeeBarbCampsCount(int iValue)
-{
-    m_iAlwaysSeeBarbCampsCount = iValue;
-}
-
-//	--------------------------------------------------------------------------------
-/// Changes if we always see where Barb Camps appear
-void CvPlayer::ChangeAlwaysSeeBarbCampsCount(int iChange)
-{
-    SetAlwaysSeeBarbCampsCount(m_iAlwaysSeeBarbCampsCount + iChange);
-}
-
-//	--------------------------------------------------------------------------------
 CvPlayerTechs *CvPlayer::GetPlayerTechs() const
 {
     return m_pPlayerTechs;
@@ -21066,7 +21043,6 @@ void CvPlayer::processPolicies(PolicyTypes ePolicy, int iChange)
     ChangeWoundedUnitDamageMod(pPolicy->GetWoundedUnitDamageMod() * iChange);
     ChangeUnitUpgradeCostMod(pPolicy->GetUnitUpgradeCostMod() * iChange);
     ChangeBarbarianCombatBonus(pPolicy->GetBarbarianCombatBonus() * iChange);
-    ChangeAlwaysSeeBarbCampsCount(pPolicy->IsAlwaysSeeBarbCamps() * iChange);
     ChangeMaxNumBuilders(pPolicy->GetNumExtraBuilders() * iChange);
     ChangePlotGoldCostMod(pPolicy->GetPlotGoldCostMod() * iChange);
     ChangePlotCultureCostModifier(pPolicy->GetPlotCultureCostModifier() * iChange);
@@ -21655,28 +21631,25 @@ void CvPlayer::processPolicies(PolicyTypes ePolicy, int iChange)
 /// If we should see where the locations of all current Barb Camps are, do it
 void CvPlayer::doUpdateBarbarianCampVisibility()
 {
-    if (IsAlwaysSeeBarbCamps())
+    CvPlot *pPlot;
+
+    ImprovementTypes eImprovement;
+
+    for (int iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); ++iPlotLoop)
     {
-        CvPlot *pPlot;
+        pPlot = GC.getMap().plotByIndexUnchecked(iPlotLoop);
 
-        ImprovementTypes eImprovement;
-
-        for (int iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); ++iPlotLoop)
+        if (pPlot->isRevealed(getTeam()))
         {
-            pPlot = GC.getMap().plotByIndexUnchecked(iPlotLoop);
+            eImprovement = pPlot->getImprovementType();
 
-            if (pPlot->isRevealed(getTeam()))
+            // Camp here
+            if (eImprovement == GC.getBARBARIAN_CAMP_IMPROVEMENT())
             {
-                eImprovement = pPlot->getImprovementType();
-
-                // Camp here
-                if (eImprovement == GC.getBARBARIAN_CAMP_IMPROVEMENT())
+                // We don't see Camp
+                if (pPlot->getRevealedImprovementType(getTeam()) != eImprovement)
                 {
-                    // We don't see Camp
-                    if (pPlot->getRevealedImprovementType(getTeam()) != eImprovement)
-                    {
-                        pPlot->setRevealedImprovementType(getTeam(), eImprovement);
-                    }
+                    pPlot->setRevealedImprovementType(getTeam(), eImprovement);
                 }
             }
         }
@@ -21921,7 +21894,6 @@ void CvPlayer::Read(FDataStream &kStream)
     kStream >> m_iWoundedUnitDamageMod;
     kStream >> m_iUnitUpgradeCostMod;
     kStream >> m_iBarbarianCombatBonus;
-    kStream >> m_iAlwaysSeeBarbCampsCount;
     kStream >> m_iHappinessFromBuildings;
     kStream >> m_iHappinessPerCity;
     kStream >> m_iAdvancedStartPoints;
@@ -22480,7 +22452,6 @@ void CvPlayer::Write(FDataStream &kStream) const
     kStream << m_iWoundedUnitDamageMod;
     kStream << m_iUnitUpgradeCostMod;
     kStream << m_iBarbarianCombatBonus;
-    kStream << m_iAlwaysSeeBarbCampsCount;
     kStream << m_iHappinessFromBuildings;
     kStream << m_iHappinessPerCity;
     kStream << m_iAdvancedStartPoints;

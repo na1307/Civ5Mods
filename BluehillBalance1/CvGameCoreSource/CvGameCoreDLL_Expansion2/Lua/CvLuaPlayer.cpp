@@ -4654,17 +4654,18 @@ int CvLuaPlayer::lGetCombatBonusVsLargerCiv(lua_State *L)
 //------------------------------------------------------------------------------
 int CvLuaPlayer::lIsAlwaysSeeBarbCamps(lua_State *L)
 {
-    return BasicLuaMethod(L, &CvPlayerAI::IsAlwaysSeeBarbCamps);
+    lua_pushboolean(L, true);
+    return 1;
 }
 //------------------------------------------------------------------------------
 int CvLuaPlayer::lSetAlwaysSeeBarbCampsCount(lua_State *L)
 {
-    return BasicLuaMethod(L, &CvPlayerAI::SetAlwaysSeeBarbCampsCount);
+    return 1;
 }
 //------------------------------------------------------------------------------
 int CvLuaPlayer::lChangeAlwaysSeeBarbCampsCount(lua_State *L)
 {
-    return BasicLuaMethod(L, &CvPlayerAI::ChangeAlwaysSeeBarbCampsCount);
+    return 1;
 }
 //------------------------------------------------------------------------------
 int CvLuaPlayer::lGetGarrisonedCityRangeStrikeModifier(lua_State *L)

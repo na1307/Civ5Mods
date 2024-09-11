@@ -517,10 +517,6 @@ public:
     void SetBarbarianCombatBonus(int iValue);
     void ChangeBarbarianCombatBonus(int iChange);
 
-    bool IsAlwaysSeeBarbCamps() const;
-    void SetAlwaysSeeBarbCampsCount(int iValue);
-    void ChangeAlwaysSeeBarbCampsCount(int iChange);
-
     void setHasPolicy(PolicyTypes eIndex, bool bNewValue);
     int getNextPolicyCost() const;
     void DoUpdateNextPolicyCost();
@@ -1608,7 +1604,6 @@ protected:
     FAutoVariable<int, CvPlayer> m_iWoundedUnitDamageMod;
     FAutoVariable<int, CvPlayer> m_iUnitUpgradeCostMod;
     FAutoVariable<int, CvPlayer> m_iBarbarianCombatBonus;
-    FAutoVariable<int, CvPlayer> m_iAlwaysSeeBarbCampsCount;
     FAutoVariable<int, CvPlayer> m_iHappinessFromBuildings;
     FAutoVariable<int, CvPlayer> m_iHappinessPerCity;
     int m_iHappinessPerXPolicies;
