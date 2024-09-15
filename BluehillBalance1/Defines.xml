@@ -1,21 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Created by ModBuddy on 2024-09-05 오후 8:41:56 -->
 <GameData>
-	<Defines>
-		<Update>
-			<Where Name="OPINION_WEIGHT_EMBASSY"/>
-			<Set>
-				<Value>-2</Value>
-			</Set>
-		</Update>
-		<Row Name="OPINION_WEIGHT_EMBASSY_THEM">
-			<Value>-1</Value>
-		</Row>
-		<Row Name="OPINION_WEIGHT_DIPLOMAT">
-			<Value>-10</Value>
-		</Row>
-		<Row Name="OPINION_WEIGHT_OPEN_BORDERS_US">
-			<Value>-5</Value>
-		</Row>
-	</Defines>
+  <Defines>
+    <Update>
+      <Where Name="OPINION_WEIGHT_EMBASSY"/>
+      <Set>
+        <Value>-2</Value>
+      </Set>
+    </Update>
+    <Row Name="OPINION_WEIGHT_EMBASSY_THEM">
+      <Value>-1</Value>
+    </Row>
+    <Row Name="OPINION_WEIGHT_DIPLOMAT">
+      <Value>-10</Value>
+    </Row>
+    <Row Name="OPINION_WEIGHT_OPEN_BORDERS_US">
+      <Value>-5</Value>
+    </Row>
+    <Row Name="MINOR_FRIENDSHIP_DROP_PER_TURN_FRIENDLY">
+      <Value>-50</Value>
+    </Row>
+    <Update>
+      <Where Name="FRIENDSHIP_PER_BARB_KILLED"/>
+      <Set>
+        <Value>20</Value>
+      </Set>
+    </Update>
+  </Defines>
 </GameData>
