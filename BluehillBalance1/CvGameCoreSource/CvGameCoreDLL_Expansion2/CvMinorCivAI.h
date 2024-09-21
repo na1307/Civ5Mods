@@ -317,6 +317,10 @@ public:
     bool IsGoodTimeForPledgeToProtectQuest();
     bool IsGoodTimeForDenounceMajorQuest();
 
+    int GetGiveGoldQuestCleared() const;
+    void SetGiveGoldQuestCleared(int iValue);
+    void ChangeGiveGoldQuestCleared(int iChange);
+
     // ******************************
     // ***** Friendship *****
     // ******************************
@@ -560,6 +564,7 @@ private:
 
     int m_iTurnsSinceThreatenedByBarbarians;
     int m_iGlobalQuestCountdown;
+    int m_iGiveGoldQuestCleared;
 
     bool m_abWarQuestAgainstMajor[MAX_MAJOR_CIVS];
     int m_aaiNumEnemyUnitsLeftToKillByMajor[MAX_MAJOR_CIVS][MAX_MAJOR_CIVS];

@@ -51,6 +51,15 @@
     <Row Tag="TXT_KEY_GAME_OPTION_AI_NOT_GIVE_UP_CITIES_PEACE_HELP">
       <Text>AI never gives up ownership of remaining cities in a peace treaty. If you don't want to see AI give up so easily and helplessly, try it.</Text>
     </Row>
+    <Row Tag="TXT_KEY_POP_CSTATE_BULLY_FACTOR_RESISTANCE">
+      <Text>Resistance to Bullying</Text>
+    </Row>
+    <Update>
+      <Where Tag="TXT_KEY_CITY_STATE_PERSONALITY_FRIENDLY_TT" />
+      <Set>
+        <Text>A befriended [COLOR_POSITIVE_TEXT]Friendly[ENDCOLOR] City-State drops more slowly than normal. They will also usually make requests that require some peaceful action, like building a Wonder or constructing a Road to them.</Text>
+      </Set>
+    </Update>
     <Update>
       <Where Tag="TXT_KEY_NOTIFICATION_MINOR_BARB_KILLED" />
       <Set>
@@ -109,6 +118,15 @@
     <Row Tag="TXT_KEY_GAME_OPTION_AI_NOT_GIVE_UP_CITIES_PEACE_HELP">
       <Text>AI가 평화 협상에서 남은 도시의 소유권을 절대로 포기하지 않습니다. AI가 쉽게 무기력하게 포기하는 꼴을 보기 싫다면 사용해보세요.</Text>
     </Row>
+    <Row Tag="TXT_KEY_POP_CSTATE_BULLY_FACTOR_RESISTANCE">
+      <Text>공물을 더 잘 바치지 않으려 함</Text>
+    </Row>
+    <Update>
+      <Where Tag="TXT_KEY_CITY_STATE_PERSONALITY_FRIENDLY_TT" />
+      <Set>
+        <Text>[COLOR_POSITIVE_TEXT]호의적[ENDCOLOR]인 성격의 도시 국가는 일반적인 도시 국가보다 [ICON_INFLUENCE]영향력이 더 느리게 감소합니다. 또한, 불가사의 건설을 요구한다거나 도로를 연결해달라는 등등의 주로 평화적인 요구를 합니다.</Text>
+      </Set>
+    </Update>
     <Update>
       <Where Tag="TXT_KEY_NOTIFICATION_MINOR_BARB_KILLED" />
       <Set>

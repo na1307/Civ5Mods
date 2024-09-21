@@ -1314,6 +1314,8 @@ bool CvMinorCivQuest::DoFinishQuest()
         strMessage = Localization::Lookup("TXT_KEY_NOTIFICATION_QUEST_COMPLETE_GIVE_GOLD");
         strMessage << strCivKey;
         strSummary = Localization::Lookup("TXT_KEY_NOTIFICATION_SUMMARY_QUEST_COMPLETE_GIVE_GOLD");
+
+        pMinor->GetMinorCivAI()->ChangeGiveGoldQuestCleared(1);
     }
 
     // Pledge to protect
@@ -1629,6 +1631,7 @@ void CvMinorCivAI::Reset()
 
     m_iTurnsSinceThreatenedByBarbarians = -1;
     m_iGlobalQuestCountdown = -1;
+    m_iGiveGoldQuestCleared = 0;
 
     m_eAlly = NO_PLAYER;
     m_iTurnAllied = -1;
@@ -5166,6 +5169,24 @@ bool CvMinorCivAI::IsGoodTimeForDenounceMajorQuest()
     return false;
 }
 
+/// Give Gold Quest Clear Count
+int CvMinorCivAI::GetGiveGoldQuestCleared() const
+{
+    return m_iGiveGoldQuestCleared;
+}
+
+/// Set Give Gold Quest Clear Count
+void CvMinorCivAI::SetGiveGoldQuestCleared(int iValue)
+{
+    m_iGiveGoldQuestCleared = iValue;
+}
+
+/// Change Give Gold Quest Clear Count
+void CvMinorCivAI::ChangeGiveGoldQuestCleared(int iChange)
+{
+    SetGiveGoldQuestCleared(GetGiveGoldQuestCleared() + iChange);
+}
+
 
 // ******************************
 // ***** Friendship *****
@@ -8219,6 +8240,29 @@ int CvMinorCivAI::CalculateBullyMetric(PlayerTypes eBullyPlayer, bool bForUnit, 
             Localization::String strNegativeFactor = Localization::Lookup("TXT_KEY_POP_CSTATE_BULLY_FACTOR_NEGATIVE");
             strNegativeFactor << iMilitaristicScore;
             strNegativeFactor << "TXT_KEY_POP_CSTATE_BULLY_FACTOR_MILITARISTIC";
+            sFactors += strNegativeFactor.toUTF8();
+        }
+    }
+
+    // **************************
+    // Resistance to Bullying
+    //
+    // -300 ~ -0
+    // **************************
+    if (GetGiveGoldQuestCleared() > 0)
+    {
+        int iScorePerTimes = -15;
+        int iResistanceScore = iScorePerTimes * GetGiveGoldQuestCleared();
+        if (iResistanceScore < -300)
+        {
+            iResistanceScore = -300;
+        }
+        iScore += iResistanceScore;
+        if (sTooltipSink)
+        {
+            Localization::String strNegativeFactor = Localization::Lookup("TXT_KEY_POP_CSTATE_BULLY_FACTOR_NEGATIVE");
+            strNegativeFactor << iResistanceScore;
+            strNegativeFactor << "TXT_KEY_POP_CSTATE_BULLY_FACTOR_RESISTANCE";
             sFactors += strNegativeFactor.toUTF8();
         }
     }
