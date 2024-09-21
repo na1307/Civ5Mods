@@ -1,107 +1,119 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Created by ModBuddy on 2024-08-31 오후 10:50:11 -->
 <GameData>
-	<!-- English -->
-	<Language_en_US>
-		<Row Tag="TXT_KEY_BUILD_FEATURE_FOOD">
-			<Text>, providing {1_Num} [ICON_FOOD] Food to the nearest City.</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILD_FEATURE_FOOD_PRODUCTION">
-			<Text>, providing {1_Num} [ICON_FOOD] Food and {2_Num} [ICON_PRODUCTION] Production to the nearest City.</Text>
-		</Row>
-		<Row Tag="TXT_KEY_MISC_CLEARING_FEATURE_RESOURCE_FOOD">
-			<Text>Clearing {TXT_KEY_GRAMMAR_A_AN &lt;&lt; {@1_FeatName}} has created {2_Num} [ICON_FOOD] for {@3_CityName}.</Text>
-		</Row>
-		<Row Tag="TXT_KEY_DIPLO_WE_HAVE_EMBASSY">
-			<Text>[COLOR_POSITIVE_TEXT]We have an embassy in their capital.[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_DIPLO_DIPLOMAT">
-			<Text>[COLOR_POSITIVE_TEXT]We have a Diplomat in their capital.[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_DIPLO_OPEN_BORDERS_US">
-			<Text>[COLOR_POSITIVE_TEXT]We have opened our borders to them.[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_RAZEABLE_CS">
-			<Text>Razeable City-States</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_RAZEABLE_CS_HELP">
-			<Text>Can raze City-States.</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_RAZEABLE_UNIQUE_RESOURCES">
-			<Text>Razeable Unique Resources</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_RAZEABLE_UNIQUE_RESOURCES_HELP">
-			<Text>Can raze cities with Unique Resources (such as the Indonesian trait).</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_RANDOM_CITY_NAMES">
-			<Text>Random City Names</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_RANDOM_CITY_NAMES_HELP">
-			<Text>Randomize City Names excluding the Capital.</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_LIBERATE_CS_AFTER_BUYOUT">
-			<Text>Liberate CS after Marriage or Buyout</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_LIBERATE_CS_AFTER_BUYOUT_HELP">
-			<Text>Can liberate Austria's Diplomatic Marriage or Venice's Buyout City-States. Additional Unhappiness occurs when Austria annexes City-States.</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_AI_NOT_GIVE_UP_CITIES_PEACE">
-			<Text>AI doesn't give up cities in peace treaty</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_AI_NOT_GIVE_UP_CITIES_PEACE_HELP">
-			<Text>AI never gives up ownership of remaining cities in a peace treaty. If you don't want to see AI give up so easily and helplessly, try it.</Text>
-		</Row>
-	</Language_en_US>
+  <!-- English -->
+  <Language_en_US>
+    <Row Tag="TXT_KEY_BUILD_FEATURE_FOOD">
+      <Text>, providing {1_Num} [ICON_FOOD] Food to the nearest City.</Text>
+    </Row>
+    <Row Tag="TXT_KEY_BUILD_FEATURE_FOOD_PRODUCTION">
+      <Text>, providing {1_Num} [ICON_FOOD] Food and {2_Num} [ICON_PRODUCTION] Production to the nearest City.</Text>
+    </Row>
+    <Row Tag="TXT_KEY_MISC_CLEARING_FEATURE_RESOURCE_FOOD">
+      <Text>Clearing {TXT_KEY_GRAMMAR_A_AN &lt;&lt; {@1_FeatName}} has created {2_Num} [ICON_FOOD] for {@3_CityName}.</Text>
+    </Row>
+    <Row Tag="TXT_KEY_DIPLO_WE_HAVE_EMBASSY">
+      <Text>[COLOR_POSITIVE_TEXT]We have an embassy in their capital.[ENDCOLOR]</Text>
+    </Row>
+    <Row Tag="TXT_KEY_DIPLO_DIPLOMAT">
+      <Text>[COLOR_POSITIVE_TEXT]We have a Diplomat in their capital.[ENDCOLOR]</Text>
+    </Row>
+    <Row Tag="TXT_KEY_DIPLO_OPEN_BORDERS_US">
+      <Text>[COLOR_POSITIVE_TEXT]We have opened our borders to them.[ENDCOLOR]</Text>
+    </Row>
+    <Row Tag="TXT_KEY_GAME_OPTION_RAZEABLE_CS">
+      <Text>Razeable City-States</Text>
+    </Row>
+    <Row Tag="TXT_KEY_GAME_OPTION_RAZEABLE_CS_HELP">
+      <Text>Can raze City-States.</Text>
+    </Row>
+    <Row Tag="TXT_KEY_GAME_OPTION_RAZEABLE_UNIQUE_RESOURCES">
+      <Text>Razeable Unique Resources</Text>
+    </Row>
+    <Row Tag="TXT_KEY_GAME_OPTION_RAZEABLE_UNIQUE_RESOURCES_HELP">
+      <Text>Can raze cities with Unique Resources (such as the Indonesian trait).</Text>
+    </Row>
+    <Row Tag="TXT_KEY_GAME_OPTION_RANDOM_CITY_NAMES">
+      <Text>Random City Names</Text>
+    </Row>
+    <Row Tag="TXT_KEY_GAME_OPTION_RANDOM_CITY_NAMES_HELP">
+      <Text>Randomize City Names excluding the Capital.</Text>
+    </Row>
+    <Row Tag="TXT_KEY_GAME_OPTION_LIBERATE_CS_AFTER_BUYOUT">
+      <Text>Liberate CS after Marriage or Buyout</Text>
+    </Row>
+    <Row Tag="TXT_KEY_GAME_OPTION_LIBERATE_CS_AFTER_BUYOUT_HELP">
+      <Text>Can liberate Austria's Diplomatic Marriage or Venice's Buyout City-States. Additional Unhappiness occurs when Austria annexes City-States.</Text>
+    </Row>
+    <Row Tag="TXT_KEY_GAME_OPTION_AI_NOT_GIVE_UP_CITIES_PEACE">
+      <Text>AI doesn't give up cities in peace treaty</Text>
+    </Row>
+    <Row Tag="TXT_KEY_GAME_OPTION_AI_NOT_GIVE_UP_CITIES_PEACE_HELP">
+      <Text>AI never gives up ownership of remaining cities in a peace treaty. If you don't want to see AI give up so easily and helplessly, try it.</Text>
+    </Row>
+    <Update>
+      <Where Tag="TXT_KEY_NOTIFICATION_MINOR_BARB_KILLED" />
+      <Set>
+        <Text>You have killed a group of Barbarians near {1_CivName:textkey}! They are grateful, and your [ICON_INFLUENCE] Influence with them has increased by 20!</Text>
+      </Set>
+    </Update>
+  </Language_en_US>
 
-	<!-- 한국어 -->
-	<Language_KO_KR>
-		<Row Tag="TXT_KEY_BUILD_FEATURE_FOOD">
-			<Text>, 가장 가까운 도시에 [COLOR_POSITIVE_TEXT]{1_Num}[ENDCOLOR] [ICON_FOOD]식량을 제공합니다.</Text>
-		</Row>
-		<Row Tag="TXT_KEY_BUILD_FEATURE_FOOD_PRODUCTION">
-			<Text>, 가장 가까운 도시에 [COLOR_POSITIVE_TEXT]{1_Num}[ENDCOLOR] [ICON_FOOD]식량 및 [COLOR_POSITIVE_TEXT]{2_Num}[ENDCOLOR] [ICON_PRODUCTION]생산력을 제공합니다.</Text>
-		</Row>
-		<Row Tag="TXT_KEY_MISC_CLEARING_FEATURE_RESOURCE_FOOD">
-			<Text>{@1_FeatName}의 제거를 완료했습니다. [COLOR_POSITIVE_TEXT]{2_Num} [ENDCOLOR][ICON_FOOD]식량이 {@3_CityName}에 추가됐습니다.</Text>
-		</Row>
-		<Row Tag="TXT_KEY_DIPLO_WE_HAVE_EMBASSY">
-			<Text>[COLOR_POSITIVE_TEXT]우리는 그들의 수도에 대사관을 가지고 있습니다.[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_DIPLO_DIPLOMAT">
-			<Text>[COLOR_POSITIVE_TEXT]그들의 수도에 우리의 외교관이 있습니다.[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_DIPLO_OPEN_BORDERS_US">
-			<Text>[COLOR_POSITIVE_TEXT]우리는 그들에게 국경을 개방했습니다.[ENDCOLOR]</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_RAZEABLE_CS">
-			<Text>도시 국가 파괴 가능</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_RAZEABLE_CS_HELP">
-			<Text>도시 국가를 불태울 수 있습니다.</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_RAZEABLE_UNIQUE_RESOURCES">
-			<Text>특유 자원 파괴 가능</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_RAZEABLE_UNIQUE_RESOURCES_HELP">
-			<Text>특유 자원(인도네시아 특성 등)이 있는 도시를 불태울 수 있습니다.</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_RANDOM_CITY_NAMES">
-			<Text>무작위 도시 이름</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_RANDOM_CITY_NAMES_HELP">
-			<Text>수도를 제외한 도시 이름을 무작위로 지정합니다.</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_LIBERATE_CS_AFTER_BUYOUT">
-			<Text>정략결혼, 구입 후 도시 국가 해방 가능</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_LIBERATE_CS_AFTER_BUYOUT_HELP">
-			<Text>오스트리아로 정략결혼되거나, 베네치아로 매수된 도시 국가를 해방시킬 수 있습니다. 오스트리아가 도시 국가를 합병하면 추가 불행이 발생합니다.</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_AI_NOT_GIVE_UP_CITIES_PEACE">
-			<Text>AI가 평화 협상에서 도시를 포기하지 않음</Text>
-		</Row>
-		<Row Tag="TXT_KEY_GAME_OPTION_AI_NOT_GIVE_UP_CITIES_PEACE_HELP">
-			<Text>AI가 평화 협상에서 남은 도시의 소유권을 절대로 포기하지 않습니다. AI가 쉽게 무기력하게 포기하는 꼴을 보기 싫다면 사용해보세요.</Text>
-		</Row>
-	</Language_KO_KR>
+  <!-- 한국어 -->
+  <Language_KO_KR>
+    <Row Tag="TXT_KEY_BUILD_FEATURE_FOOD">
+      <Text>, 가장 가까운 도시에 [COLOR_POSITIVE_TEXT]{1_Num}[ENDCOLOR] [ICON_FOOD]식량을 제공합니다.</Text>
+    </Row>
+    <Row Tag="TXT_KEY_BUILD_FEATURE_FOOD_PRODUCTION">
+      <Text>, 가장 가까운 도시에 [COLOR_POSITIVE_TEXT]{1_Num}[ENDCOLOR] [ICON_FOOD]식량 및 [COLOR_POSITIVE_TEXT]{2_Num}[ENDCOLOR] [ICON_PRODUCTION]생산력을 제공합니다.</Text>
+    </Row>
+    <Row Tag="TXT_KEY_MISC_CLEARING_FEATURE_RESOURCE_FOOD">
+      <Text>{@1_FeatName}의 제거를 완료했습니다. [COLOR_POSITIVE_TEXT]{2_Num} [ENDCOLOR][ICON_FOOD]식량이 {@3_CityName}에 추가됐습니다.</Text>
+    </Row>
+    <Row Tag="TXT_KEY_DIPLO_WE_HAVE_EMBASSY">
+      <Text>[COLOR_POSITIVE_TEXT]우리는 그들의 수도에 대사관을 가지고 있습니다.[ENDCOLOR]</Text>
+    </Row>
+    <Row Tag="TXT_KEY_DIPLO_DIPLOMAT">
+      <Text>[COLOR_POSITIVE_TEXT]그들의 수도에 우리의 외교관이 있습니다.[ENDCOLOR]</Text>
+    </Row>
+    <Row Tag="TXT_KEY_DIPLO_OPEN_BORDERS_US">
+      <Text>[COLOR_POSITIVE_TEXT]우리는 그들에게 국경을 개방했습니다.[ENDCOLOR]</Text>
+    </Row>
+    <Row Tag="TXT_KEY_GAME_OPTION_RAZEABLE_CS">
+      <Text>도시 국가 파괴 가능</Text>
+    </Row>
+    <Row Tag="TXT_KEY_GAME_OPTION_RAZEABLE_CS_HELP">
+      <Text>도시 국가를 불태울 수 있습니다.</Text>
+    </Row>
+    <Row Tag="TXT_KEY_GAME_OPTION_RAZEABLE_UNIQUE_RESOURCES">
+      <Text>특유 자원 파괴 가능</Text>
+    </Row>
+    <Row Tag="TXT_KEY_GAME_OPTION_RAZEABLE_UNIQUE_RESOURCES_HELP">
+      <Text>특유 자원(인도네시아 특성 등)이 있는 도시를 불태울 수 있습니다.</Text>
+    </Row>
+    <Row Tag="TXT_KEY_GAME_OPTION_RANDOM_CITY_NAMES">
+      <Text>무작위 도시 이름</Text>
+    </Row>
+    <Row Tag="TXT_KEY_GAME_OPTION_RANDOM_CITY_NAMES_HELP">
+      <Text>수도를 제외한 도시 이름을 무작위로 지정합니다.</Text>
+    </Row>
+    <Row Tag="TXT_KEY_GAME_OPTION_LIBERATE_CS_AFTER_BUYOUT">
+      <Text>정략결혼, 구입 후 도시 국가 해방 가능</Text>
+    </Row>
+    <Row Tag="TXT_KEY_GAME_OPTION_LIBERATE_CS_AFTER_BUYOUT_HELP">
+      <Text>오스트리아로 정략결혼되거나, 베네치아로 매수된 도시 국가를 해방시킬 수 있습니다. 오스트리아가 도시 국가를 합병하면 추가 불행이 발생합니다.</Text>
+    </Row>
+    <Row Tag="TXT_KEY_GAME_OPTION_AI_NOT_GIVE_UP_CITIES_PEACE">
+      <Text>AI가 평화 협상에서 도시를 포기하지 않음</Text>
+    </Row>
+    <Row Tag="TXT_KEY_GAME_OPTION_AI_NOT_GIVE_UP_CITIES_PEACE_HELP">
+      <Text>AI가 평화 협상에서 남은 도시의 소유권을 절대로 포기하지 않습니다. AI가 쉽게 무기력하게 포기하는 꼴을 보기 싫다면 사용해보세요.</Text>
+    </Row>
+    <Update>
+      <Where Tag="TXT_KEY_NOTIFICATION_MINOR_BARB_KILLED" />
+      <Set>
+        <Text>{1_CivName:textkey} 근처의 야만인을 처리했습니다! {1_CivName:textkey}에 대한 [ICON_INFLUENCE]영향력이 [COLOR_POSITIVE_TEXT]20[ENDCOLOR] 증가했습니다.</Text>
+      </Set>
+    </Update>
+  </Language_KO_KR>
 </GameData>

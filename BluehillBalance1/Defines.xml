@@ -17,6 +17,21 @@
     <Row Name="OPINION_WEIGHT_OPEN_BORDERS_US">
       <Value>-5</Value>
     </Row>
+    <Row Name="MINOR_CIV_CONTACT_FAITH_FIRST">
+      <Value>8</Value>
+    </Row>
+    <Row Name="MINOR_CIV_CONTACT_FAITH_OTHER">
+      <Value>4</Value>
+    </Row>
+    <Row Name="MINOR_GOLD_GIFT_INVEST_BOOST_PERCENTAGE">
+      <Value>50</Value>
+    </Row>
+    <Row Name="MINOR_BULLY_GOLD_GROWTH_FACTOR">
+      <Value>450</Value>
+    </Row>
+    <Row Name="MINOR_RECENTLY_BULLIED_TURN_INTERVAL">
+      <Value>20</Value>
+    </Row>
     <Row Name="MINOR_FRIENDSHIP_DROP_PER_TURN_FRIENDLY">
       <Value>-50</Value>
     </Row>
@@ -26,5 +41,68 @@
         <Value>20</Value>
       </Set>
     </Update>
+    <Row Name="MINOR_REPROTECT_GRACE_PERIOD">
+      <Value>20</Value>
+    </Row>
+    <Row Name="MINOR_UNPROTECT_GRACE_PERIOD">
+      <Value>10</Value>
+    </Row>
+    <Row Name="MINOR_CIV_QUEST_ROUTE_MAX_DISTANCE">
+      <Value>8</Value>
+    </Row>
+    <Row Name="MINOR_CIV_QUEST_CONTEST_CULTURE_PLAYERS_NEEDED">
+      <Value>3</Value>
+    </Row>
+    <Row Name="MINOR_CIV_QUEST_CONTEST_FAITH_PLAYERS_NEEDED">
+      <Value>3</Value>
+    </Row>
+    <Row Name="MINOR_CIV_QUEST_CONTEST_TECHS_PLAYERS_NEEDED">
+      <Value>3</Value>
+    </Row>
+    <Row Name="MINOR_CIV_QUEST_INVEST_PLAYERS_NEEDED">
+      <Value>2</Value>
+    </Row>
+    <Row Name="MINOR_CIV_QUEST_WEIGHT_MULTIPLIER_HOSTILE_BULLY_CITY_STATE">
+      <Value>200</Value>
+    </Row>
+    <Row Name="MINOR_CIV_QUEST_WEIGHT_MULTIPLIER_IRRATIONAL_BULLY_CITY_STATE">
+      <Value>150</Value>
+    </Row>
+    <Row Name="MINOR_CIV_QUEST_WEIGHT_MULTIPLIER_FRIENDLY_BULLY_CITY_STATE">
+      <Value>30</Value>
+    </Row>
+    <Row Name="MINOR_CIV_QUEST_WEIGHT_MULTIPLIER_RELIGIOUS_DENOUNCE_MAJOR">
+      <Value>250</Value>
+    </Row>
+    <Row Name="MINOR_CIV_QUEST_WEIGHT_MULTIPLIER_MARITIME_DENOUNCE_MAJOR">
+      <Value>200</Value>
+    </Row>
+    <Row Name="MINOR_CIV_QUEST_WEIGHT_MULTIPLIER_OTHER_DENOUNCE_MAJOR">
+      <Value>150</Value>
+    </Row>
+    <Row Name="MINOR_CIV_QUEST_WEIGHT_MULTIPLIER_RELIGIOUS_SPREAD_RELIGION">
+      <Value>300</Value>
+    </Row>
+    <Row Name="MINOR_CIV_QUEST_WEIGHT_MULTIPLIER_MARITIME_TRADE_ROUTE">
+      <Value>200</Value>
+    </Row>
+    <Row Name="MINOR_CIV_QUEST_WEIGHT_MULTIPLIER_MERCANTILE_TRADE_ROUTE">
+      <Value>200</Value>
+    </Row>
+    <Row Name="MINOR_CIV_QUEST_WEIGHT_MULTIPLIER_CULTURED_CONTEST_CULTURE">
+      <Value>200</Value>
+    </Row>
+    <Row Name="MINOR_CIV_QUEST_WEIGHT_MULTIPLIER_RELIGIOUS_CONTEST_FAITH">
+      <Value>200</Value>
+    </Row>
+    <Row Name="MINOR_CIV_QUEST_WEIGHT_MULTIPLIER_OTHER_CONTEST_FAITH">
+      <Value>50</Value>
+    </Row>
+    <Row Name="MINOR_CIV_QUEST_WEIGHT_MULTIPLIER_RELIGIOUS_CONTEST_TECHS">
+      <Value>50</Value>
+    </Row>
+    <Row Name="MINOR_CIV_QUEST_WEIGHT_MULTIPLIER_MERCANTILE_INVEST">
+      <Value>150</Value>
+    </Row>
   </Defines>
 </GameData>

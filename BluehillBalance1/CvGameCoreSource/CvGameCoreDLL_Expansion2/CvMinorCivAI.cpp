@@ -1024,7 +1024,7 @@ void CvMinorCivQuest::DoStartQuest(int iStartTurn)
         m_iData1 = iGoldAlreadyGiven;
 
         int iTurnsRemaining = GetEndTurn() - GC.getGame().getGameTurn();
-        int iBoostPercentage = 50;//antonjs: todo: XML
+        int iBoostPercentage = /*50*/ GC.getMINOR_GOLD_GIFT_INVEST_BOOST_PERCENTAGE();
 
         strMessage = Localization::Lookup("TXT_KEY_NOTIFICATION_QUEST_INVEST");
         strMessage << iTurnsRemaining;
@@ -2128,16 +2128,16 @@ void CvMinorCivAI::DoFirstContactWithMajor(TeamTypes eTeam, bool bSuppressMessag
             // Hasn't met anyone yet?
             if (GET_TEAM(GetPlayer()->getTeam()).getHasMetCivCount(true) == 0)
             {
-                iGoldGift = /*60*/ GC.getMINOR_CIV_CONTACT_GOLD_FIRST();
+                iGoldGift = /*30*/ GC.getMINOR_CIV_CONTACT_GOLD_FIRST();
                 if (GetTrait() == MINOR_CIV_TRAIT_RELIGIOUS)
-                    iFaithGift = 8; //antonjs: todo: XML
+                    iFaithGift = /*8*/ GC.getMINOR_CIV_CONTACT_FAITH_FIRST();
                 bFirstMajorCiv = true;
             }
             else
             {
-                iGoldGift = /*30*/ GC.getMINOR_CIV_CONTACT_GOLD_OTHER();
+                iGoldGift = /*15*/ GC.getMINOR_CIV_CONTACT_GOLD_OTHER();
                 if (GetTrait() == MINOR_CIV_TRAIT_RELIGIOUS)
-                    iFaithGift = 4; //antonjs: todo: XML
+                    iFaithGift = /*4*/ GC.getMINOR_CIV_CONTACT_FAITH_OTHER();
             }
         }
 
@@ -3496,7 +3496,7 @@ bool CvMinorCivAI::IsValidQuestForPlayer(PlayerTypes ePlayer, MinorCivQuestTypes
             return false;
 
         // Must have a city close to the minor in the same Area
-        const int iMaxRouteDistance = 8; //antonjs: todo: xml
+        const int iMaxRouteDistance = /*8*/ GC.getMINOR_CIV_QUEST_ROUTE_MAX_DISTANCE();
         CvPlot *pMinorsPlot = pMinorsCapital->plot();
         if (pMinorsPlot == NULL)
             return false;
@@ -3855,22 +3855,22 @@ int CvMinorCivAI::GetMinPlayersNeededForQuest(MinorCivQuestTypes eQuest) const
 
     if (eQuest == MINOR_CIV_QUEST_CONTEST_CULTURE)
     {
-        iPlayersNeeded = 3; //antonjs: todo: XML
+        iPlayersNeeded = /*3*/ GC.getMINOR_CIV_QUEST_CONTEST_CULTURE_PLAYERS_NEEDED();
     }
 
     else if (eQuest == MINOR_CIV_QUEST_CONTEST_FAITH)
     {
-        iPlayersNeeded = 3; //antonjs: todo: XML
+        iPlayersNeeded = /*3*/ GC.getMINOR_CIV_QUEST_CONTEST_FAITH_PLAYERS_NEEDED();
     }
 
     else if (eQuest == MINOR_CIV_QUEST_CONTEST_TECHS)
     {
-        iPlayersNeeded = 3; //antonjs: todo: XML
+        iPlayersNeeded = /*3*/ GC.getMINOR_CIV_QUEST_CONTEST_TECHS_PLAYERS_NEEDED();
     }
 
     else if (eQuest == MINOR_CIV_QUEST_INVEST)
     {
-        iPlayersNeeded = 2; //antonjs: todo: XML
+        iPlayersNeeded = /*2*/ GC.getMINOR_CIV_QUEST_INVEST_PLAYERS_NEEDED();
     }
 
     int iMajorsEverAlive = GC.getGame().countMajorCivsEverAlive();
@@ -4049,17 +4049,17 @@ int CvMinorCivAI::GetPersonalityQuestBias(MinorCivQuestTypes eQuest)
     {
         if (ePersonality == MINOR_CIV_PERSONALITY_HOSTILE)
         {
-            iCount *= 200; //antonjs: todo: XML
+            iCount *= /*200*/ GC.getMINOR_CIV_QUEST_WEIGHT_MULTIPLIER_HOSTILE_BULLY_CITY_STATE();
             iCount /= 100;
         }
         else if (ePersonality == MINOR_CIV_PERSONALITY_IRRATIONAL)
         {
-            iCount *= 150; //antonjs: todo: xml
+            iCount *= /*150*/ GC.getMINOR_CIV_QUEST_WEIGHT_MULTIPLIER_IRRATIONAL_BULLY_CITY_STATE();
             iCount /= 100;
         }
         else if (ePersonality == MINOR_CIV_PERSONALITY_FRIENDLY)
         {
-            iCount *= 30; //antonjs: todo: xml
+            iCount *= /*30*/ GC.getMINOR_CIV_QUEST_WEIGHT_MULTIPLIER_FRIENDLY_BULLY_CITY_STATE();
             iCount /= 100;
         }
     }
@@ -4069,17 +4069,17 @@ int CvMinorCivAI::GetPersonalityQuestBias(MinorCivQuestTypes eQuest)
     {
         if (eTrait == MINOR_CIV_TRAIT_RELIGIOUS)
         {
-            iCount *= 250; //antonjs: todo: xml
+            iCount *= /*250*/ GC.getMINOR_CIV_QUEST_WEIGHT_MULTIPLIER_RELIGIOUS_DENOUNCE_MAJOR();
             iCount /= 100;
         }
         else if (eTrait == MINOR_CIV_TRAIT_MARITIME)
         {
-            iCount *= 200; //antonjs: todo: xml
+            iCount *= /*200*/ GC.getMINOR_CIV_QUEST_WEIGHT_MULTIPLIER_MARITIME_DENOUNCE_MAJOR();
             iCount /= 100;
         }
         else
         {
-            iCount *= 150; //antonjs: todo: xml
+            iCount *= /*150*/ GC.getMINOR_CIV_QUEST_WEIGHT_MULTIPLIER_OTHER_DENOUNCE_MAJOR();
             iCount /= 100;
         }
     }
@@ -4089,7 +4089,7 @@ int CvMinorCivAI::GetPersonalityQuestBias(MinorCivQuestTypes eQuest)
     {
         if (eTrait == MINOR_CIV_TRAIT_RELIGIOUS)
         {
-            iCount *= 300; //antonjs: todo: xml
+            iCount *= /*300*/ GC.getMINOR_CIV_QUEST_WEIGHT_MULTIPLIER_RELIGIOUS_SPREAD_RELIGION();
             iCount /= 100;
         }
     }
@@ -4099,12 +4099,12 @@ int CvMinorCivAI::GetPersonalityQuestBias(MinorCivQuestTypes eQuest)
     {
         if (eTrait == MINOR_CIV_TRAIT_MARITIME)
         {
-            iCount *= 200; //xml
+            iCount *= /*200*/ GC.getMINOR_CIV_QUEST_WEIGHT_MULTIPLIER_MARITIME_TRADE_ROUTE();
             iCount /= 100;
         }
         else if (eTrait == MINOR_CIV_TRAIT_MERCANTILE)
         {
-            iCount *= 200; //xml
+            iCount *= /*200*/ GC.getMINOR_CIV_QUEST_WEIGHT_MULTIPLIER_MERCANTILE_TRADE_ROUTE();
             iCount /= 100;
         }
     }
@@ -4118,30 +4118,32 @@ int CvMinorCivAI::GetPersonalityQuestBias(MinorCivQuestTypes eQuest)
     {
         if (eTrait == MINOR_CIV_TRAIT_CULTURED)
         {
-            iCount *= 200; //antonjs: todo: XML
+            iCount *= /*200*/ GC.getMINOR_CIV_QUEST_WEIGHT_MULTIPLIER_CULTURED_CONTEST_CULTURE();
             iCount /= 100;
         }
     }
+
     // CONTEST FAITH
     else if (eQuest == MINOR_CIV_QUEST_CONTEST_FAITH)
     {
         if (eTrait == MINOR_CIV_TRAIT_RELIGIOUS)
         {
-            iCount *= 200; //antonjs: todo: XML
+            iCount *= /*200*/ GC.getMINOR_CIV_QUEST_WEIGHT_MULTIPLIER_RELIGIOUS_CONTEST_FAITH();
             iCount /= 100;
         }
         else
         {
-            iCount *= 50; //antonjs: todo: XML
+            iCount *= /*50*/ GC.getMINOR_CIV_QUEST_WEIGHT_MULTIPLIER_OTHER_CONTEST_FAITH();
             iCount /= 100;
         }
     }
+
     // CONTEST TECHS
     else if (eQuest == MINOR_CIV_QUEST_CONTEST_TECHS)
     {
         if (eTrait == MINOR_CIV_TRAIT_RELIGIOUS)
         {
-            iCount += 50; //antonjs: todo: XML
+            iCount *= /*50*/ GC.getMINOR_CIV_QUEST_WEIGHT_MULTIPLIER_RELIGIOUS_CONTEST_TECHS();
             iCount /= 100;
         }
     }
@@ -4164,7 +4166,7 @@ int CvMinorCivAI::GetPersonalityQuestBias(MinorCivQuestTypes eQuest)
     {
         if (eTrait == MINOR_CIV_TRAIT_MERCANTILE)
         {
-            iCount *= 150; //antonjs: todo: XML
+            iCount *= /*150*/ GC.getMINOR_CIV_QUEST_WEIGHT_MULTIPLIER_MERCANTILE_INVEST();
             iCount /= 100;
         }
     }
@@ -6463,7 +6465,7 @@ bool CvMinorCivAI::CanMajorProtect(PlayerTypes eMajor)
     // Must not be too soon after a previous pledge was broken
     int iCurrentTurn = GC.getGame().getGameTurn();
     int iLastPledgeBrokenTurn = GetTurnLastPledgeBrokenByMajor(eMajor);
-    const int iGracePeriod = 20; //antonjs: todo: xml
+    const int iGracePeriod = /*20*/ GC.getMINOR_REPROTECT_GRACE_PERIOD();
     if (iLastPledgeBrokenTurn >= 0 && iLastPledgeBrokenTurn + iGracePeriod > iCurrentTurn)
         return false;
 
@@ -6491,7 +6493,7 @@ bool CvMinorCivAI::CanMajorWithdrawProtection(PlayerTypes eMajor)
     // Pledge is locked in for a certain time
     int iCurrentTurn = GC.getGame().getGameTurn();
     int iLastPledgeTurn = GetTurnLastPledgedProtectionByMajor(eMajor);
-    const int iGracePeriod = 10; //antonjs: todo: xml
+    const int iGracePeriod = /*10*/ GC.getMINOR_UNPROTECT_GRACE_PERIOD();
     if (iLastPledgeTurn >= 0 && iLastPledgeTurn + iGracePeriod > iCurrentTurn)
         return false;
 
@@ -7842,7 +7844,7 @@ void CvMinorCivAI::DoAcquire(PlayerTypes eMajor, int &iNumUnits, int &iCapitalX,
 int CvMinorCivAI::GetBullyGoldAmount(PlayerTypes /*eBullyPlayer*/)
 {
     int iGold = GC.getMINOR_BULLY_GOLD();
-    int iGoldGrowthFactor = 350; //antonjs: todo: XML
+    int iGoldGrowthFactor = /*450*/ GC.getMINOR_BULLY_GOLD_GROWTH_FACTOR();
 
     // Add gold, more if later in game
     float fGameProgressFactor = ((float)GC.getGame().getElapsedGameTurns() / (float)GC.getGame().getEstimateEndTurn());
@@ -8509,7 +8511,7 @@ bool CvMinorCivAI::IsRecentlyBulliedByMajor(PlayerTypes ePlayer) const
     CvAssertMsg(ePlayer < MAX_MAJOR_CIVS, "ePlayer is expected to be within maximum bounds (invalid Index)");
     if (ePlayer < 0 || ePlayer >= MAX_MAJOR_CIVS) return false;
 
-    const int iRecentlyBulliedTurnInterval = 20; //antonjs: todo: constant/XML
+    const int iRecentlyBulliedTurnInterval = /*20*/ GC.getMINOR_RECENTLY_BULLIED_TURN_INTERVAL();
     return (m_aiTurnLastBullied[ePlayer] >= 0 && m_aiTurnLastBullied[ePlayer] >= (GC.getGame().getGameTurn() - iRecentlyBulliedTurnInterval)); // -1 means never bullied
 }
 
@@ -8863,7 +8865,7 @@ int CvMinorCivAI::GetFriendshipFromGoldGift(PlayerTypes eMajor, int iGold)
     //antonjs: todo: refine
     if (IsActiveQuestForPlayer(eMajor, MINOR_CIV_QUEST_INVEST))
     {
-        int iBoostPercentage = 50; //antonjs: todo: xml
+        int iBoostPercentage = /*50*/ GC.getMINOR_GOLD_GIFT_INVEST_BOOST_PERCENTAGE();
         iFriendship *= 100 + iBoostPercentage;
         iFriendship /= 100;
     }
