@@ -52,7 +52,7 @@
       <Text>AI never gives up ownership of remaining cities in a peace treaty. If you don't want to see AI give up so easily and helplessly, try it.</Text>
     </Row>
     <Row Tag="TXT_KEY_POP_CSTATE_BULLY_FACTOR_RESISTANCE">
-      <Text>Resistance to Bullying</Text>
+      <Text>Unwillingness to pay more Tribute</Text>
     </Row>
     <Update>
       <Where Tag="TXT_KEY_CITY_STATE_PERSONALITY_FRIENDLY_TT" />
