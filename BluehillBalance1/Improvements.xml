@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2024-09-22 오후 5:24:14 -->
+<GameData>
+  <Improvements>
+    <Update>
+      <Where Type="IMPROVEMENT_FARM" />
+      <Set>
+        <PillageGold>10</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_MINE" />
+      <Set>
+        <PillageGold>40</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_QUARRY" />
+      <Set>
+        <PillageGold>40</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_TRADING_POST" />
+      <Set>
+        <PillageGold>50</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_LUMBERMILL" />
+      <Set>
+        <PillageGold>40</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_PASTURE" />
+      <Set>
+        <PillageGold>20</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_FISHING_BOATS" />
+      <Set>
+        <PillageGold>20</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_PLANTATION" />
+      <Set>
+        <PillageGold>30</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_CAMP" />
+      <Set>
+        <PillageGold>30</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_WELL" />
+      <Set>
+        <PillageGold>20</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_OFFSHORE_PLATFORM" />
+      <Set>
+        <PillageGold>40</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_LANDMARK" />
+      <Set>
+        <PillageGold>20</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_ACADEMY" />
+      <Set>
+        <PillageGold>20</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_CUSTOMS_HOUSE" />
+      <Set>
+        <PillageGold>50</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_MANUFACTORY" />
+      <Set>
+        <PillageGold>40</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_TERRACE_FARM" />
+      <Set>
+        <PillageGold>20</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_MOAI" />
+      <Set>
+        <PillageGold>20</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_HOLY_SITE" />
+      <Set>
+        <PillageGold>20</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_POLDER" />
+      <Set>
+        <PillageGold>20</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_BRAZILWOOD_CAMP" />
+      <Set>
+        <PillageGold>20</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_KASBAH" />
+      <Set>
+        <PillageGold>20</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_FEITORIA" />
+      <Set>
+        <PillageGold>20</PillageGold>
+      </Set>
+    </Update>
+    <Update>
+      <Where Type="IMPROVEMENT_CHATEAU" />
+      <Set>
+        <PillageGold>20</PillageGold>
+      </Set>
+    </Update>
+  </Improvements>
+</GameData>

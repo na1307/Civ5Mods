@@ -6478,27 +6478,18 @@ bool CvUnit::pillage()
         return false;
     }
 
-    if (pPlot->isOwned())
+    // we should not be calling this without declaring war first, so do not declare war here
+    if (pPlot->isOwned() && !isEnemy(pPlot->getTeam(), pPlot) && ((pPlot->getImprovementType() == NO_IMPROVEMENT && !pPlot->isRoute()) || (pPlot->getOwner() != getOwner())))
     {
-        // we should not be calling this without declaring war first, so do not declare war here
-        if (!isEnemy(pPlot->getTeam(), pPlot))
-        {
-            if ((pPlot->getImprovementType() == NO_IMPROVEMENT && !pPlot->isRoute()) || (pPlot->getOwner() != getOwner()))
-            {
-                return false;
-            }
-        }
+        return false;
     }
 
     bool bImprovement = false;
 
     // Has an Improvement
-    if (pPlot->getImprovementType() != NO_IMPROVEMENT)
+    if (pPlot->getImprovementType() != NO_IMPROVEMENT && !pPlot->IsImprovementPillaged())
     {
-        if (!pPlot->IsImprovementPillaged())
-        {
-            bImprovement = true;
-        }
+        bImprovement = true;
     }
 
     // Is an Improvement here that hasn't already been pillaged?
@@ -6511,12 +6502,14 @@ bool CvUnit::pillage()
         {
             if (pPlot->getTeam() != getTeam())
             {
-                int iPillageGold = 0;
-
                 // TODO: add scripting support for "doPillageGold"
-                iPillageGold = GC.getGame().getJonRandNum(pkImprovement->GetPillageGold(), "Pillage Gold 1");
-                iPillageGold += GC.getGame().getJonRandNum(pkImprovement->GetPillageGold(), "Pillage Gold 2");
+                int iPillageGold = pkImprovement->GetPillageGold();
                 iPillageGold += (getPillageChange() * iPillageGold) / 100;
+
+                // Progressive Pillage Gold
+                double fDiscoveredTechs = GET_TEAM(getTeam()).GetTeamTechs()->GetNumTechsKnown() - 1;
+                double fAllTechs = GC.GetGameTechs()->GetNumTechs() - 2; // Except Agriculture and Future Tech
+                iPillageGold = (int)(iPillageGold * (((fDiscoveredTechs / fAllTechs) * 9) + 1));
 
                 if (iPillageGold > 0)
                 {
@@ -6540,9 +6533,10 @@ bool CvUnit::pillage()
             if (getOwner() == GC.getGame().getActivePlayer() && strcmp(pkImprovement->GetType(), "IMPROVEMENT_FARM") == 0)
                 CvAchievementUnlocker::FarmImprovementPillaged();
 
-            // Improvement that's destroyed?
             bSuccessfulNonRoadPillage = true;
-            if (pkImprovement->IsDestroyedWhenPillaged())
+
+            // Improvement that's destroyed?
+            if (pkImprovement->IsDestroyedWhenPillaged() || !pPlot->isOwned())
             {
                 pPlot->setImprovementType(NO_IMPROVEMENT);
             }
@@ -19240,7 +19234,7 @@ int CvUnit::UnitPathTo(int iX, int iY, int iFlags, int iPrevETA, bool bBuildingR
 #endif
                 return 0;
             }
-        }
+            }
         else
         {
             bool bPathGenerated = UpdatePathCache(pDestPlot, iFlags);
@@ -19253,7 +19247,7 @@ int CvUnit::UnitPathTo(int iX, int iY, int iFlags, int iPrevETA, bool bBuildingR
 
             pPathPlot = GetPathFirstPlot();
         }
-    }
+        }
 
     bool bRejectMove = false;
 
@@ -19338,7 +19332,7 @@ int CvUnit::UnitPathTo(int iX, int iY, int iFlags, int iPrevETA, bool bBuildingR
     }
 
     return iETA;
-}
+    }
 
 //	---------------------------------------------------------------------------
 // Returns true if move was made...
