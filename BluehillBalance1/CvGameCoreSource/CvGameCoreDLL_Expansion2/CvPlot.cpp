@@ -2172,7 +2172,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
     CvBuildInfo &thisBuildInfo = *GC.getBuildInfo(eBuild);
     if (thisBuildInfo.isRepair())
     {
-        if (IsImprovementPillaged() || IsRoutePillaged())
+        if (isOwned() && getTeam() == eTeam && (IsImprovementPillaged() || IsRoutePillaged()))
         {
             bValid = true;
         }
@@ -2613,7 +2613,7 @@ int CvPlot::getFeatureFood(BuildTypes eBuild, PlayerTypes ePlayer, CvCity **ppCi
     iFood *= GC.getGame().getGameSpeedInfo().getFeatureProductionPercent();
     iFood /= 100;
 
-    double fDiscoveredTechs = GET_TEAM(getTeam()).GetTeamTechs()->GetNumTechsKnown() - 1;
+    double fDiscoveredTechs = GET_TEAM((*ppCity)->getTeam()).GetTeamTechs()->GetNumTechsKnown() - 1;
     double fAllTechs = GC.GetGameTechs()->GetNumTechs() - 2; // Except Agriculture and Future Tech
     iFood = (int)(iFood * (((fDiscoveredTechs / fAllTechs) * 9) + 1));
 
@@ -2670,7 +2670,7 @@ int CvPlot::getFeatureProduction(BuildTypes eBuild, PlayerTypes ePlayer, CvCity 
     iProduction *= GC.getGame().getGameSpeedInfo().getFeatureProductionPercent();
     iProduction /= 100;
 
-    double fDiscoveredTechs = GET_TEAM(getTeam()).GetTeamTechs()->GetNumTechsKnown() - 1;
+    double fDiscoveredTechs = GET_TEAM((*ppCity)->getTeam()).GetTeamTechs()->GetNumTechsKnown() - 1;
     double fAllTechs = GC.GetGameTechs()->GetNumTechs() - 2; // Except Agriculture and Future Tech
     iProduction = (int)(iProduction * (((fDiscoveredTechs / fAllTechs) * 9) + 1));
 
