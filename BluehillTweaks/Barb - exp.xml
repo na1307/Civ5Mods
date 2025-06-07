@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 7/14/2012 12:15:30 PM -->
+<GameData>
+	
+	<Defines>
+		
+		<Update>
+			<Set Value="-1" />
+			<Where Name="BARBARIAN_MAX_XP_VALUE" />
+		</Update>
+		
+	</Defines>
+	
+</GameData>

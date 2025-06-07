@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created by ModBuddy on 2024-09-01 오전 12:15:33 -->
+<GameData>
+  <Buildings>
+    <Update>
+      <Where SpecialistCount="1" />
+      <Set>
+        <SpecialistCount>2</SpecialistCount>
+      </Set>
+    </Update>
+    <Update>
+      <Where BuildingClass="BUILDINGCLASS_MARKET" />
+      <Set>
+        <NumTradeRouteBonus>1</NumTradeRouteBonus>
+      </Set>
+    </Update>
+    <Update>
+      <Where BuildingClass="BUILDINGCLASS_LIGHTHOUSE" />
+      <Set>
+        <NumTradeRouteBonus>1</NumTradeRouteBonus>
+      </Set>
+    </Update>
+    <Update>
+      <Where BuildingClass="BUILDINGCLASS_AIRPORT" />
+      <Set>
+        <NumTradeRouteBonus>1</NumTradeRouteBonus>
+      </Set>
+    </Update>
+  </Buildings>
+  <Building_YieldChanges>
+    <Update>
+      <Where BuildingType="BUILDING_AMPHITHEATER" YieldType="YIELD_CULTURE"/>
+      <Set>
+        <Yield>2</Yield>
+      </Set>
+    </Update>
+    <Update>
+      <Where BuildingType="BUILDING_OPERA_HOUSE" YieldType="YIELD_CULTURE"/>
+      <Set>
+        <Yield>2</Yield>
+      </Set>
+    </Update>
+    <Update>
+      <Where BuildingType="BUILDING_CEILIDH_HALL" YieldType="YIELD_CULTURE"/>
+      <Set>
+        <Yield>2</Yield>
+      </Set>
+    </Update>
+    <Update>
+      <Where BuildingType="BUILDING_MUSEUM" YieldType="YIELD_CULTURE"/>
+      <Set>
+        <Yield>2</Yield>
+      </Set>
+    </Update>
+    <Update>
+      <Where BuildingType="BUILDING_BROADCAST_TOWER" YieldType="YIELD_CULTURE"/>
+      <Set>
+        <Yield>3</Yield>
+      </Set>
+    </Update>
+  </Building_YieldChanges>
+</GameData>
