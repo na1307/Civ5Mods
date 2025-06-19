@@ -1,6 +1,6 @@
 ﻿#include "pch.h"
 #include <corecrt_wstdio.h>
-#include "CreateSwapChain_t.h"
+#include "FunctionPointers.h"
 
 #pragma comment(lib, "dxgi.lib")
 
@@ -11,6 +11,23 @@
 #endif
 
 CreateSwapChain_t oCreateSwapChain = nullptr;
+Present_t oPresent = nullptr;
+IDXGISwapChain *swapChain = nullptr;
+
+HRESULT STDMETHODCALLTYPE hkPresent(IDXGISwapChain *pSwapChain, UINT syncInterval, UINT flags) {
+	BOOL isFullscreen = FALSE;
+	IDXGIOutput *pOutput = nullptr;
+
+	if (SUCCEEDED(pSwapChain->GetFullscreenState(&isFullscreen, &pOutput)) && isFullscreen && FAILED(pSwapChain->SetFullscreenState(FALSE, nullptr))) {
+		MessageBoxW(nullptr, L"Windowing Failed", L"Error", MB_ICONERROR);
+	}
+
+	if (pOutput) {
+		pOutput->Release();
+	}
+
+	return oPresent(pSwapChain, syncInterval, flags);
+}
 
 HRESULT STDMETHODCALLTYPE hkCreateSwapChain(
 	IDXGIFactory *pFactory, IUnknown *pDevice,
@@ -19,13 +36,35 @@ HRESULT STDMETHODCALLTYPE hkCreateSwapChain(
 	HRESULT hr = oCreateSwapChain(pFactory, pDevice, pDesc, ppSwapChain);
 
 	if (SUCCEEDED(hr) && ppSwapChain && *ppSwapChain) {
-		auto fshr = (*ppSwapChain)->SetFullscreenState(FALSE, nullptr);
+		if (swapChain) {
+			swapChain->Release();
+		}
 
-		if (fshr != S_OK) {
-			MessageBoxW(nullptr, fshr == DXGI_ERROR_NOT_CURRENTLY_AVAILABLE ? L"Not Available" : L"Unknown", L"Error", MB_ICONHAND);
-			MessageBoxW(nullptr, L"Windowed Failed", L"Error", MB_ICONHAND);
+		swapChain = *ppSwapChain;
+		swapChain->AddRef();
 
-			return 1;
+		if (!oPresent) {
+			void **vtbl = *reinterpret_cast<void ***>(swapChain);
+			void *presentAddr = vtbl[8];
+			auto mhc = MH_CreateHook(presentAddr, &hkPresent, reinterpret_cast<void **>(&oPresent));
+
+			if (mhc != MH_OK) {
+				wchar_t asdf[10];
+				swprintf_s(asdf, L"%d", mhc);
+				MessageBoxW(nullptr, asdf, nullptr, MB_ICONERROR);
+
+				return 1;
+			}
+
+			auto mhe = MH_EnableHook(presentAddr);
+
+			if (mhe != MH_OK) {
+				wchar_t asdf[10];
+				swprintf_s(asdf, L"%d", mhe);
+				MessageBoxW(nullptr, asdf, nullptr, MB_ICONERROR);
+
+				return 1;
+			}
 		}
 	}
 
@@ -84,6 +123,10 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 
 				return 1;
 			}
+
+			//while (true) {
+			//	Sleep(30000);
+			//}
 
 			return 0;
 		}, nullptr, 0, nullptr);
