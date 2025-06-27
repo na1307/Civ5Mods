@@ -1,6 +1,7 @@
 ﻿#include "pch.h"
 #include <corecrt_wstdio.h>
 #include "FunctionPointers.h"
+#include "../../minhook/include/MinHook.h"
 
 #pragma comment(lib, "dxgi.lib")
 

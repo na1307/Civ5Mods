@@ -28,11 +28,6 @@
       <Default>1</Default>
     </Row>
     <Row>
-      <Type>GAMEOPTION_RAZEABLE_CS</Type>
-      <Description>TXT_KEY_GAME_OPTION_RAZEABLE_CS</Description>
-      <Help>TXT_KEY_GAME_OPTION_RAZEABLE_CS_HELP</Help>
-    </Row>
-    <Row>
       <Type>GAMEOPTION_RAZEABLE_UNIQUE_RESOURCES</Type>
       <Description>TXT_KEY_GAME_OPTION_RAZEABLE_UNIQUE_RESOURCES</Description>
       <Help>TXT_KEY_GAME_OPTION_RAZEABLE_UNIQUE_RESOURCES_HELP</Help>
